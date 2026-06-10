@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using EcoCollect.Config;
 
 
 namespace EcoCollect.Views
@@ -33,7 +34,7 @@ namespace EcoCollect.Views
             this.Close();
         }
 
-        private void btnMasuk_Click(object sender, EventArgs e)
+    private void btnMasuk_Click(object sender, EventArgs e)
         {
             
             if (string.IsNullOrEmpty(txtUsername.Text) || string.IsNullOrEmpty(txtPassword.Text))
@@ -52,7 +53,9 @@ namespace EcoCollect.Views
                 if (cekLogin)
                 {
                     MessageBox.Show("Login Sukses! Selamat datang Nasabah.", "Berhasil", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    
+                    this.Hide();
+                    FormDashboardNasabah dashboard = new FormDashboardNasabah();
+                    dashboard.Show();
                 }
                 else
                 {

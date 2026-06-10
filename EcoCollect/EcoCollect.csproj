@@ -88,6 +88,12 @@
     <Compile Include="Models\M_User.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\FormDashboardNasabah.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FormDashboardNasabah.Designer.cs">
+      <DependentUpon>FormDashboardNasabah.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\FormBeranda.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,7 +126,11 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Views\FormDashboardNasabah.resx">
+      <DependentUpon>FormDashboardNasabah.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\FormBeranda.resx">
       <DependentUpon>FormBeranda.cs</DependentUpon>
     </EmbeddedResource>
@@ -147,6 +157,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2026-06-10 at 14.43.28.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2026-06-10 at 14.43.281.jpeg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
