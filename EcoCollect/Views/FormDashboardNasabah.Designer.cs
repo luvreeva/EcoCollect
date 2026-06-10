@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+<<<<<<< HEAD
             this.btn_logout = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -58,5 +59,14 @@
 
         #endregion
         private System.Windows.Forms.Button btn_logout;
+=======
+            this.components = new System.ComponentModel.Container();
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Text = "FormDashboardNasabah";
+        }
+
+        #endregion
+>>>>>>> c0102491a5ba903bedbf5ead0eb8ac60d2752d65
     }
 }
