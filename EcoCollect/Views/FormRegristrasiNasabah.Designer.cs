@@ -76,6 +76,7 @@
             this.txtNoHP.Name = "txtNoHP";
             this.txtNoHP.Size = new System.Drawing.Size(381, 23);
             this.txtNoHP.TabIndex = 3;
+            
             // 
             // btnDaftar
             // 
@@ -88,6 +89,7 @@
             this.btnDaftar.Size = new System.Drawing.Size(178, 23);
             this.btnDaftar.TabIndex = 4;
             this.btnDaftar.UseVisualStyleBackColor = false;
+            this.btnDaftar.Click += new System.EventHandler(this.btnDaftar_Click);
             // 
             // btnKeLogin
             // 

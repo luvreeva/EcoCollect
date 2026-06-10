@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EcoCollect.Controllers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 namespace EcoCollect.Views
 {
@@ -29,6 +31,38 @@ namespace EcoCollect.Views
             EcoCollect.Views.FormBeranda beranda = new EcoCollect.Views.FormBeranda();
             beranda.Show();
             this.Close();
+        }
+
+        private void btnMasuk_Click(object sender, EventArgs e)
+        {
+            
+            if (string.IsNullOrEmpty(txtUsername.Text) || string.IsNullOrEmpty(txtPassword.Text))
+            {
+                MessageBox.Show("Username dan Password harus diisi!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            try
+            {
+               
+                AuthController auth = new AuthController();
+                bool cekLogin = auth.LoginNasabah(txtUsername.Text, txtPassword.Text);
+
+               
+                if (cekLogin)
+                {
+                    MessageBox.Show("Login Sukses! Selamat datang Nasabah.", "Berhasil", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    
+                }
+                else
+                {
+                    MessageBox.Show("Username atau Password salah!", "Gagal Masuk", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Koneksi Error: " + ex.Message, "Error Database", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

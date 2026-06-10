@@ -36,11 +36,52 @@ namespace EcoCollect.Views
 
         private void btnKeBeranda_Click(object sender, EventArgs e)
         {
-           
+
             EcoCollect.Views.FormBeranda beranda = new EcoCollect.Views.FormBeranda();
             beranda.Show();
             this.Close();
         }
+
+        private void btnDaftar_Click(object sender, EventArgs e)
+        {
+            
+            if (string.IsNullOrEmpty(txtNamaLengkap.Text) || string.IsNullOrEmpty(txtUsername.Text) ||
+                string.IsNullOrEmpty(txtPassword.Text) || string.IsNullOrEmpty(txtNoHP.Text))
+            {
+                MessageBox.Show("Semua kolom registrasi wajib diisi!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            try
+            {
+                
+                AuthController auth = new AuthController();
+                bool cekDaftar = auth.RegisterNasabah(
+                    txtNamaLengkap.Text,
+                    txtUsername.Text,
+                    txtPassword.Text,
+                    txtNoHP.Text
+
+                );
+
+                
+                if (cekDaftar)
+                {
+                    MessageBox.Show("Akun berhasil terdaftar di database! Silakan balik ke halaman login.", "Registrasi Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    
+                    FormLoginNasabah login = new FormLoginNasabah();
+                    login.Show();
+                    this.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                
+                MessageBox.Show("Gagal Daftar: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
     
     }
 }

@@ -65,6 +65,7 @@
             this.btnMasuk.Size = new System.Drawing.Size(183, 30);
             this.btnMasuk.TabIndex = 2;
             this.btnMasuk.UseVisualStyleBackColor = false;
+            this.btnMasuk.Click += new System.EventHandler(this.btnMasuk_Click);
             // 
             // btnKeRegristrasi
             // 
