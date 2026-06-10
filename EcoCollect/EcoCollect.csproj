@@ -94,6 +94,12 @@
     <Compile Include="Views\FormBeranda.Designer.cs">
       <DependentUpon>FormBeranda.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\FormDashboardNasabah.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FormDashboardNasabah.Designer.cs">
+      <DependentUpon>FormDashboardNasabah.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\FormLoginNasabah.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +129,9 @@
     </Compile>
     <EmbeddedResource Include="Views\FormBeranda.resx">
       <DependentUpon>FormBeranda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormDashboardNasabah.resx">
+      <DependentUpon>FormDashboardNasabah.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\FormLoginNasabah.resx">
       <DependentUpon>FormLoginNasabah.cs</DependentUpon>
