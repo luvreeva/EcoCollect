@@ -40,9 +40,10 @@
             this.btnAksesPetugas.BackColor = System.Drawing.Color.Transparent;
             this.btnAksesPetugas.FlatAppearance.BorderSize = 0;
             this.btnAksesPetugas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAksesPetugas.Location = new System.Drawing.Point(456, 310);
+            this.btnAksesPetugas.Location = new System.Drawing.Point(608, 382);
+            this.btnAksesPetugas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAksesPetugas.Name = "btnAksesPetugas";
-            this.btnAksesPetugas.Size = new System.Drawing.Size(149, 17);
+            this.btnAksesPetugas.Size = new System.Drawing.Size(199, 21);
             this.btnAksesPetugas.TabIndex = 0;
             this.btnAksesPetugas.UseVisualStyleBackColor = false;
             this.btnAksesPetugas.Click += new System.EventHandler(this.btnAksesPetugas_Click);
@@ -52,9 +53,10 @@
             this.btnAksesNasabah.BackColor = System.Drawing.Color.Transparent;
             this.btnAksesNasabah.FlatAppearance.BorderSize = 0;
             this.btnAksesNasabah.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAksesNasabah.Location = new System.Drawing.Point(456, 414);
+            this.btnAksesNasabah.Location = new System.Drawing.Point(608, 510);
+            this.btnAksesNasabah.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAksesNasabah.Name = "btnAksesNasabah";
-            this.btnAksesNasabah.Size = new System.Drawing.Size(149, 16);
+            this.btnAksesNasabah.Size = new System.Drawing.Size(199, 20);
             this.btnAksesNasabah.TabIndex = 1;
             this.btnAksesNasabah.UseVisualStyleBackColor = false;
             // 
@@ -63,9 +65,10 @@
             this.btnAkses.BackColor = System.Drawing.Color.Transparent;
             this.btnAkses.FlatAppearance.BorderSize = 0;
             this.btnAkses.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAkses.Location = new System.Drawing.Point(456, 295);
+            this.btnAkses.Location = new System.Drawing.Point(608, 363);
+            this.btnAkses.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAkses.Name = "btnAkses";
-            this.btnAkses.Size = new System.Drawing.Size(149, 19);
+            this.btnAkses.Size = new System.Drawing.Size(199, 23);
             this.btnAkses.TabIndex = 2;
             this.btnAkses.UseVisualStyleBackColor = false;
             this.btnAkses.Click += new System.EventHandler(this.btnAkses_Click);
@@ -75,25 +78,28 @@
             this.btnAksesN.BackColor = System.Drawing.Color.Transparent;
             this.btnAksesN.FlatAppearance.BorderSize = 0;
             this.btnAksesN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAksesN.Location = new System.Drawing.Point(456, 394);
+            this.btnAksesN.Location = new System.Drawing.Point(608, 485);
+            this.btnAksesN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAksesN.Name = "btnAksesN";
-            this.btnAksesN.Size = new System.Drawing.Size(149, 23);
+            this.btnAksesN.Size = new System.Drawing.Size(199, 28);
             this.btnAksesN.TabIndex = 3;
             this.btnAksesN.UseVisualStyleBackColor = false;
             this.btnAksesN.Click += new System.EventHandler(this.btnAksesN_Click);
             // 
             // FormBeranda
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(894, 474);
+            this.ClientSize = new System.Drawing.Size(1192, 583);
             this.Controls.Add(this.btnAksesN);
             this.Controls.Add(this.btnAkses);
             this.Controls.Add(this.btnAksesNasabah);
             this.Controls.Add(this.btnAksesPetugas);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormBeranda";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormBeranda";
             this.Load += new System.EventHandler(this.FormBeranda_Load);
             this.ResumeLayout(false);

@@ -1,0 +1,253 @@
+﻿namespace EcoCollect.Views
+{
+    partial class FormDashboardPetugas
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.btnKelolaJenisSampah = new System.Windows.Forms.Button();
+            this.btnSetorSampah = new System.Windows.Forms.Button();
+            this.btnRiwayatSetorSampah = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
+            this.btnRiwayatDashboardPetugas = new System.Windows.Forms.Button();
+            this.btnSetorDashboardPetugas = new System.Windows.Forms.Button();
+            this.btnKelolaSampahDashboardPetugas = new System.Windows.Forms.Button();
+            this.lbTotalNasabahDashboardPetugas = new System.Windows.Forms.Label();
+            this.lbTotalJenisSampahDashBoardPetugas = new System.Windows.Forms.Label();
+            this.lbTotalTransaksiDashboardPetugas = new System.Windows.Forms.Label();
+            this.lbTotalSampahDashboardPetugas = new System.Windows.Forms.Label();
+            this.mainPanel = new System.Windows.Forms.Panel();
+            this.dgvRiwayatDashboardPetugas = new System.Windows.Forms.DataGridView();
+            this.mainPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRiwayatDashboardPetugas)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // btnKelolaJenisSampah
+            // 
+            this.btnKelolaJenisSampah.BackColor = System.Drawing.Color.Transparent;
+            this.btnKelolaJenisSampah.FlatAppearance.BorderSize = 0;
+            this.btnKelolaJenisSampah.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKelolaJenisSampah.Location = new System.Drawing.Point(32, 204);
+            this.btnKelolaJenisSampah.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnKelolaJenisSampah.Name = "btnKelolaJenisSampah";
+            this.btnKelolaJenisSampah.Size = new System.Drawing.Size(300, 36);
+            this.btnKelolaJenisSampah.TabIndex = 0;
+            this.btnKelolaJenisSampah.UseVisualStyleBackColor = false;
+            // 
+            // btnSetorSampah
+            // 
+            this.btnSetorSampah.BackColor = System.Drawing.Color.Transparent;
+            this.btnSetorSampah.FlatAppearance.BorderSize = 0;
+            this.btnSetorSampah.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSetorSampah.Location = new System.Drawing.Point(32, 254);
+            this.btnSetorSampah.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSetorSampah.Name = "btnSetorSampah";
+            this.btnSetorSampah.Size = new System.Drawing.Size(300, 38);
+            this.btnSetorSampah.TabIndex = 1;
+            this.btnSetorSampah.UseVisualStyleBackColor = false;
+            // 
+            // btnRiwayatSetorSampah
+            // 
+            this.btnRiwayatSetorSampah.BackColor = System.Drawing.Color.Transparent;
+            this.btnRiwayatSetorSampah.FlatAppearance.BorderSize = 0;
+            this.btnRiwayatSetorSampah.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRiwayatSetorSampah.Location = new System.Drawing.Point(32, 304);
+            this.btnRiwayatSetorSampah.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnRiwayatSetorSampah.Name = "btnRiwayatSetorSampah";
+            this.btnRiwayatSetorSampah.Size = new System.Drawing.Size(299, 39);
+            this.btnRiwayatSetorSampah.TabIndex = 2;
+            this.btnRiwayatSetorSampah.UseVisualStyleBackColor = false;
+            this.btnRiwayatSetorSampah.Click += new System.EventHandler(this.btnRiwayatSetorSampah_Click);
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.BackColor = System.Drawing.Color.Transparent;
+            this.btnLogout.FlatAppearance.BorderSize = 0;
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout.Location = new System.Drawing.Point(31, 523);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(300, 39);
+            this.btnLogout.TabIndex = 3;
+            this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // btnRiwayatDashboardPetugas
+            // 
+            this.btnRiwayatDashboardPetugas.BackColor = System.Drawing.Color.Transparent;
+            this.btnRiwayatDashboardPetugas.FlatAppearance.BorderSize = 0;
+            this.btnRiwayatDashboardPetugas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRiwayatDashboardPetugas.Location = new System.Drawing.Point(400, 172);
+            this.btnRiwayatDashboardPetugas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnRiwayatDashboardPetugas.Name = "btnRiwayatDashboardPetugas";
+            this.btnRiwayatDashboardPetugas.Size = new System.Drawing.Size(223, 69);
+            this.btnRiwayatDashboardPetugas.TabIndex = 4;
+            this.btnRiwayatDashboardPetugas.UseVisualStyleBackColor = false;
+            this.btnRiwayatDashboardPetugas.Click += new System.EventHandler(this.btnRiwayatDashboardPetugas_Click);
+            // 
+            // btnSetorDashboardPetugas
+            // 
+            this.btnSetorDashboardPetugas.BackColor = System.Drawing.Color.Transparent;
+            this.btnSetorDashboardPetugas.FlatAppearance.BorderSize = 0;
+            this.btnSetorDashboardPetugas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSetorDashboardPetugas.Location = new System.Drawing.Point(653, 172);
+            this.btnSetorDashboardPetugas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSetorDashboardPetugas.Name = "btnSetorDashboardPetugas";
+            this.btnSetorDashboardPetugas.Size = new System.Drawing.Size(227, 69);
+            this.btnSetorDashboardPetugas.TabIndex = 5;
+            this.btnSetorDashboardPetugas.UseVisualStyleBackColor = false;
+            // 
+            // btnKelolaSampahDashboardPetugas
+            // 
+            this.btnKelolaSampahDashboardPetugas.BackColor = System.Drawing.Color.Transparent;
+            this.btnKelolaSampahDashboardPetugas.FlatAppearance.BorderSize = 0;
+            this.btnKelolaSampahDashboardPetugas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKelolaSampahDashboardPetugas.Location = new System.Drawing.Point(912, 172);
+            this.btnKelolaSampahDashboardPetugas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnKelolaSampahDashboardPetugas.Name = "btnKelolaSampahDashboardPetugas";
+            this.btnKelolaSampahDashboardPetugas.Size = new System.Drawing.Size(221, 69);
+            this.btnKelolaSampahDashboardPetugas.TabIndex = 6;
+            this.btnKelolaSampahDashboardPetugas.UseVisualStyleBackColor = false;
+            // 
+            // lbTotalNasabahDashboardPetugas
+            // 
+            this.lbTotalNasabahDashboardPetugas.BackColor = System.Drawing.Color.Transparent;
+            this.lbTotalNasabahDashboardPetugas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbTotalNasabahDashboardPetugas.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTotalNasabahDashboardPetugas.Location = new System.Drawing.Point(440, 275);
+            this.lbTotalNasabahDashboardPetugas.Name = "lbTotalNasabahDashboardPetugas";
+            this.lbTotalNasabahDashboardPetugas.Size = new System.Drawing.Size(19, 18);
+            this.lbTotalNasabahDashboardPetugas.TabIndex = 7;
+            this.lbTotalNasabahDashboardPetugas.Text = "0";
+            this.lbTotalNasabahDashboardPetugas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbTotalJenisSampahDashBoardPetugas
+            // 
+            this.lbTotalJenisSampahDashBoardPetugas.BackColor = System.Drawing.Color.Transparent;
+            this.lbTotalJenisSampahDashBoardPetugas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbTotalJenisSampahDashBoardPetugas.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTotalJenisSampahDashBoardPetugas.Location = new System.Drawing.Point(640, 275);
+            this.lbTotalJenisSampahDashBoardPetugas.Name = "lbTotalJenisSampahDashBoardPetugas";
+            this.lbTotalJenisSampahDashBoardPetugas.Size = new System.Drawing.Size(19, 18);
+            this.lbTotalJenisSampahDashBoardPetugas.TabIndex = 8;
+            this.lbTotalJenisSampahDashBoardPetugas.Text = "0";
+            this.lbTotalJenisSampahDashBoardPetugas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbTotalTransaksiDashboardPetugas
+            // 
+            this.lbTotalTransaksiDashboardPetugas.BackColor = System.Drawing.Color.Transparent;
+            this.lbTotalTransaksiDashboardPetugas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbTotalTransaksiDashboardPetugas.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTotalTransaksiDashboardPetugas.Location = new System.Drawing.Point(832, 275);
+            this.lbTotalTransaksiDashboardPetugas.Name = "lbTotalTransaksiDashboardPetugas";
+            this.lbTotalTransaksiDashboardPetugas.Size = new System.Drawing.Size(19, 18);
+            this.lbTotalTransaksiDashboardPetugas.TabIndex = 9;
+            this.lbTotalTransaksiDashboardPetugas.Text = "0";
+            this.lbTotalTransaksiDashboardPetugas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbTotalSampahDashboardPetugas
+            // 
+            this.lbTotalSampahDashboardPetugas.BackColor = System.Drawing.Color.Transparent;
+            this.lbTotalSampahDashboardPetugas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbTotalSampahDashboardPetugas.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTotalSampahDashboardPetugas.Location = new System.Drawing.Point(1016, 274);
+            this.lbTotalSampahDashboardPetugas.Name = "lbTotalSampahDashboardPetugas";
+            this.lbTotalSampahDashboardPetugas.Size = new System.Drawing.Size(36, 18);
+            this.lbTotalSampahDashboardPetugas.TabIndex = 10;
+            this.lbTotalSampahDashboardPetugas.Text = "0";
+            this.lbTotalSampahDashboardPetugas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // mainPanel
+            // 
+            this.mainPanel.BackColor = System.Drawing.Color.Transparent;
+            this.mainPanel.Controls.Add(this.dgvRiwayatDashboardPetugas);
+            this.mainPanel.Location = new System.Drawing.Point(414, 344);
+            this.mainPanel.Name = "mainPanel";
+            this.mainPanel.Size = new System.Drawing.Size(705, 194);
+            this.mainPanel.TabIndex = 12;
+            // 
+            // dgvRiwayatDashboardPetugas
+            // 
+            this.dgvRiwayatDashboardPetugas.AllowUserToAddRows = false;
+            this.dgvRiwayatDashboardPetugas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvRiwayatDashboardPetugas.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dgvRiwayatDashboardPetugas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRiwayatDashboardPetugas.Location = new System.Drawing.Point(0, 0);
+            this.dgvRiwayatDashboardPetugas.Name = "dgvRiwayatDashboardPetugas";
+            this.dgvRiwayatDashboardPetugas.ReadOnly = true;
+            this.dgvRiwayatDashboardPetugas.RowHeadersWidth = 51;
+            this.dgvRiwayatDashboardPetugas.RowTemplate.Height = 24;
+            this.dgvRiwayatDashboardPetugas.Size = new System.Drawing.Size(705, 194);
+            this.dgvRiwayatDashboardPetugas.TabIndex = 13;
+            // 
+            // FormDashboardPetugas
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::EcoCollect.Properties.Resources.P_A2;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1192, 583);
+            this.Controls.Add(this.mainPanel);
+            this.Controls.Add(this.lbTotalSampahDashboardPetugas);
+            this.Controls.Add(this.lbTotalTransaksiDashboardPetugas);
+            this.Controls.Add(this.lbTotalJenisSampahDashBoardPetugas);
+            this.Controls.Add(this.lbTotalNasabahDashboardPetugas);
+            this.Controls.Add(this.btnKelolaSampahDashboardPetugas);
+            this.Controls.Add(this.btnSetorDashboardPetugas);
+            this.Controls.Add(this.btnRiwayatDashboardPetugas);
+            this.Controls.Add(this.btnLogout);
+            this.Controls.Add(this.btnRiwayatSetorSampah);
+            this.Controls.Add(this.btnSetorSampah);
+            this.Controls.Add(this.btnKelolaJenisSampah);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Name = "FormDashboardPetugas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "FormDashboardPetugas";
+            this.Load += new System.EventHandler(this.FormDashboardPetugas_Load);
+            this.mainPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRiwayatDashboardPetugas)).EndInit();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Button btnKelolaJenisSampah;
+        private System.Windows.Forms.Button btnSetorSampah;
+        private System.Windows.Forms.Button btnRiwayatSetorSampah;
+        private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.Button btnRiwayatDashboardPetugas;
+        private System.Windows.Forms.Button btnSetorDashboardPetugas;
+        private System.Windows.Forms.Button btnKelolaSampahDashboardPetugas;
+        private System.Windows.Forms.Label lbTotalNasabahDashboardPetugas;
+        private System.Windows.Forms.Label lbTotalJenisSampahDashBoardPetugas;
+        private System.Windows.Forms.Label lbTotalTransaksiDashboardPetugas;
+        private System.Windows.Forms.Label lbTotalSampahDashboardPetugas;
+        private System.Windows.Forms.Panel mainPanel;
+        private System.Windows.Forms.DataGridView dgvRiwayatDashboardPetugas;
+    }
+}

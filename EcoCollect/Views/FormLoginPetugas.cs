@@ -1,4 +1,5 @@
 ﻿using EcoCollect.Controllers;
+using EcoCollect.Helpers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -53,15 +54,17 @@ namespace EcoCollect.Views
             AuthController auth = new AuthController();
             bool berhasil = auth.LoginPetugas(username, password);
 
-           
+
             if (berhasil)
             {
-                MessageBox.Show("Login petugas berhasil!", "Sukses",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(
+                    "Login sebagai " + Session.NamaPetugas,
+                    "Sukses",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
 
-                
-                FormBeranda beranda = new FormBeranda();
-                beranda.Show();
+                FormDashboardPetugas dashboard = new FormDashboardPetugas();
+                dashboard.Show();
                 this.Hide();
             }
             else

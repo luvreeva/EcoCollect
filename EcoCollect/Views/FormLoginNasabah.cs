@@ -49,17 +49,10 @@ namespace EcoCollect.Views
                 AuthController auth = new AuthController();
                 bool cekLogin = auth.LoginNasabah(txtUsername.Text, txtPassword.Text);
 
-               
+
                 if (cekLogin)
                 {
                     MessageBox.Show("Login Sukses! Selamat datang Nasabah.", "Berhasil", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Hide();
-                    FormDashboardNasabah dashboard = new FormDashboardNasabah();
-                    dashboard.Show();
-                }
-                else
-                {
-                    MessageBox.Show("Username atau Password salah!", "Gagal Masuk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
