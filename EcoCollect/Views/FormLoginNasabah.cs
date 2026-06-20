@@ -15,6 +15,7 @@ namespace EcoCollect.Views
 {
     public partial class FormLoginNasabah : Form
     {
+        private string connString = "Host=localhost;Port=5432;Username=postgres;Password=Reeva97;Database=\"ECO-COLLECT1\"";
         public FormLoginNasabah()
         {
             InitializeComponent();
@@ -34,9 +35,8 @@ namespace EcoCollect.Views
             this.Close();
         }
 
-    private void btnMasuk_Click(object sender, EventArgs e)
+        private void btnMasuk_Click(object sender, EventArgs e)
         {
-            
             if (string.IsNullOrEmpty(txtUsername.Text) || string.IsNullOrEmpty(txtPassword.Text))
             {
                 MessageBox.Show("Username dan Password harus diisi!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -45,27 +45,39 @@ namespace EcoCollect.Views
 
             try
             {
-               
                 AuthController auth = new AuthController();
-                bool cekLogin = auth.LoginNasabah(txtUsername.Text, txtPassword.Text);
 
-               
-                if (cekLogin)
+                // Memanggil fungsi login baru yang mengembalikan status angka
+                int hasilLogin = auth.LoginNasabah(txtUsername.Text, txtPassword.Text);
+
+                if (hasilLogin == 1) // Sukses
                 {
+                    EcoCollect.Models.UserSession.UsernameBaruLogin = txtUsername.Text;
+
                     MessageBox.Show("Login Sukses! Selamat datang Nasabah.", "Berhasil", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                     this.Hide();
                     FormDashboardNasabah dashboard = new FormDashboardNasabah();
                     dashboard.Show();
                 }
-                else
+                else if (hasilLogin == 0) // Username tidak ada
                 {
-                    MessageBox.Show("Username atau Password salah!", "Gagal Masuk", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Username Anda belum terdaftar di sistem! Silakan registrasi terlebih dahulu.", "Gagal Masuk", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (hasilLogin == -1) // Password salah
+                {
+                    MessageBox.Show("Password yang Anda masukkan salah! Periksa kembali huruf besar-kecilnya.", "Gagal Masuk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Koneksi Error: " + ex.Message, "Error Database", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            txtPassword.UseSystemPasswordChar = !checkBox1.Checked;
         }
     }
 }

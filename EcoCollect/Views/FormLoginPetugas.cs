@@ -70,6 +70,11 @@ namespace EcoCollect.Views
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            txtPassword.UseSystemPasswordChar = !checkBox1.Checked;
+        }
     }
     
 }

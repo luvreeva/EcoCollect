@@ -44,7 +44,6 @@ namespace EcoCollect.Views
 
         private void btnDaftar_Click(object sender, EventArgs e)
         {
-            
             if (string.IsNullOrEmpty(txtNamaLengkap.Text) || string.IsNullOrEmpty(txtUsername.Text) ||
                 string.IsNullOrEmpty(txtPassword.Text) || string.IsNullOrEmpty(txtNoHP.Text))
             {
@@ -54,34 +53,38 @@ namespace EcoCollect.Views
 
             try
             {
-                
                 AuthController auth = new AuthController();
                 bool cekDaftar = auth.RegisterNasabah(
                     txtNamaLengkap.Text,
                     txtUsername.Text,
                     txtPassword.Text,
                     txtNoHP.Text
-
                 );
 
-                
                 if (cekDaftar)
                 {
                     MessageBox.Show("Akun berhasil terdaftar di database! Silakan balik ke halaman login.", "Registrasi Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    
                     FormLoginNasabah login = new FormLoginNasabah();
                     login.Show();
                     this.Close();
                 }
+                else
+                {
+                    // INI YANG TADI HILANG! Jika koneksi gagal / query ditolak pgAdmin
+                    MessageBox.Show("Gagal menyimpan ke database! Periksa apakah koneksi pgAdmin terputus atau nama tabel salah.", "Registrasi Gagal", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             catch (Exception ex)
             {
-                
-                MessageBox.Show("Gagal Daftar: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                // Menangkap error crash sistem dari database
+                MessageBox.Show("Gagal Daftar (Sistem Error): " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-    
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            txtPassword.UseSystemPasswordChar = !checkBox1.Checked;
+        }
     }
 }

@@ -79,11 +79,16 @@
   <ItemGroup>
     <Compile Include="Config\DbConnection.cs" />
     <Compile Include="Controllers\AuthController.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="Controllers\C_NasabahDashboard.cs" />
+    <Compile Include="Controllers\C_Penarikan.cs" />
+    <Compile Include="Controllers\C_Setoran.cs" />
+    <Compile Include="Controllers\ICrud_Controller.cs" />
+    <Compile Include="Models\UserSession.cs" />
+    <Compile Include="ProfilNasabah.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="ProfilNasabah.Designer.cs">
+      <DependentUpon>ProfilNasabah.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\M_User.cs" />
     <Compile Include="Program.cs" />
@@ -130,18 +135,15 @@
     <Compile Include="Views\FormTarikSaldo.Designer.cs">
       <DependentUpon>FormTarikSaldo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\FormPengaturanProfil.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\FormPengaturanProfil.Designer.cs">
-      <DependentUpon>FormPengaturanProfil.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\FormRiwayatKeuanganPenarikan.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\FormRiwayatKeuanganPenarikan.Designer.cs">
       <DependentUpon>FormRiwayatKeuanganPenarikan.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ProfilNasabah.resx">
+      <DependentUpon>ProfilNasabah.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -172,9 +174,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\FormTarikSaldo.resx">
       <DependentUpon>FormTarikSaldo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\FormPengaturanProfil.resx">
-      <DependentUpon>FormPengaturanProfil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\FormRiwayatKeuanganPenarikan.resx">
       <DependentUpon>FormRiwayatKeuanganPenarikan.cs</DependentUpon>

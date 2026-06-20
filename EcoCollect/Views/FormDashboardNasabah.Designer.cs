@@ -42,6 +42,7 @@ namespace EcoCollect.Views
             this.lblTotalSetor = new System.Windows.Forms.Label();
             this.lblTotalTarik = new System.Windows.Forms.Label();
             this.btnRiwayatKeuangan = new System.Windows.Forms.Button();
+            this.btnProfil = new System.Windows.Forms.Button();
             this.panelRiwayatPenyetoranDashboard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRiwayatPenyetoranDashboard)).BeginInit();
             this.panel1.SuspendLayout();
@@ -51,10 +52,14 @@ namespace EcoCollect.Views
             // btnLogoutNasabah
             // 
             this.btnLogoutNasabah.BackColor = System.Drawing.Color.Transparent;
+            this.btnLogoutNasabah.FlatAppearance.BorderSize = 0;
+            this.btnLogoutNasabah.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnLogoutNasabah.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnLogoutNasabah.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogoutNasabah.Location = new System.Drawing.Point(118, 659);
+            this.btnLogoutNasabah.Location = new System.Drawing.Point(19, 428);
+            this.btnLogoutNasabah.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnLogoutNasabah.Name = "btnLogoutNasabah";
-            this.btnLogoutNasabah.Size = new System.Drawing.Size(256, 39);
+            this.btnLogoutNasabah.Size = new System.Drawing.Size(229, 25);
             this.btnLogoutNasabah.TabIndex = 0;
             this.btnLogoutNasabah.UseVisualStyleBackColor = false;
             this.btnLogoutNasabah.Click += new System.EventHandler(this.btnLogoutNasabah_Click);
@@ -62,10 +67,14 @@ namespace EcoCollect.Views
             // btnFiturTarikSaldo
             // 
             this.btnFiturTarikSaldo.BackColor = System.Drawing.Color.Transparent;
+            this.btnFiturTarikSaldo.FlatAppearance.BorderSize = 0;
+            this.btnFiturTarikSaldo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnFiturTarikSaldo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnFiturTarikSaldo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFiturTarikSaldo.Location = new System.Drawing.Point(95, 260);
+            this.btnFiturTarikSaldo.Location = new System.Drawing.Point(19, 169);
+            this.btnFiturTarikSaldo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnFiturTarikSaldo.Name = "btnFiturTarikSaldo";
-            this.btnFiturTarikSaldo.Size = new System.Drawing.Size(277, 37);
+            this.btnFiturTarikSaldo.Size = new System.Drawing.Size(229, 24);
             this.btnFiturTarikSaldo.TabIndex = 2;
             this.btnFiturTarikSaldo.UseVisualStyleBackColor = false;
             this.btnFiturTarikSaldo.Click += new System.EventHandler(this.btnFiturTarikSaldo_Click);
@@ -74,9 +83,10 @@ namespace EcoCollect.Views
             // 
             this.button4.BackColor = System.Drawing.Color.Transparent;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(95, 386);
+            this.button4.Location = new System.Drawing.Point(63, 251);
+            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(278, 37);
+            this.button4.Size = new System.Drawing.Size(185, 24);
             this.button4.TabIndex = 4;
             this.button4.UseVisualStyleBackColor = false;
             // 
@@ -87,9 +97,10 @@ namespace EcoCollect.Views
             this.panelRiwayatPenyetoranDashboard.BackColor = System.Drawing.Color.Transparent;
             this.panelRiwayatPenyetoranDashboard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelRiwayatPenyetoranDashboard.Controls.Add(this.dgvRiwayatPenyetoranDashboard);
-            this.panelRiwayatPenyetoranDashboard.Location = new System.Drawing.Point(454, 376);
+            this.panelRiwayatPenyetoranDashboard.Location = new System.Drawing.Point(303, 244);
+            this.panelRiwayatPenyetoranDashboard.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelRiwayatPenyetoranDashboard.Name = "panelRiwayatPenyetoranDashboard";
-            this.panelRiwayatPenyetoranDashboard.Size = new System.Drawing.Size(399, 272);
+            this.panelRiwayatPenyetoranDashboard.Size = new System.Drawing.Size(269, 179);
             this.panelRiwayatPenyetoranDashboard.TabIndex = 5;
             // 
             // dgvRiwayatPenyetoranDashboard
@@ -100,9 +111,11 @@ namespace EcoCollect.Views
             this.dgvRiwayatPenyetoranDashboard.AllowUserToResizeRows = false;
             this.dgvRiwayatPenyetoranDashboard.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvRiwayatPenyetoranDashboard.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dgvRiwayatPenyetoranDashboard.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvRiwayatPenyetoranDashboard.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRiwayatPenyetoranDashboard.GridColor = System.Drawing.Color.Black;
-            this.dgvRiwayatPenyetoranDashboard.Location = new System.Drawing.Point(-2, -2);
+            this.dgvRiwayatPenyetoranDashboard.Location = new System.Drawing.Point(2, 1);
+            this.dgvRiwayatPenyetoranDashboard.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvRiwayatPenyetoranDashboard.Name = "dgvRiwayatPenyetoranDashboard";
             this.dgvRiwayatPenyetoranDashboard.ReadOnly = true;
             this.dgvRiwayatPenyetoranDashboard.RowHeadersWidth = 62;
@@ -110,7 +123,7 @@ namespace EcoCollect.Views
             this.dgvRiwayatPenyetoranDashboard.ShowCellErrors = false;
             this.dgvRiwayatPenyetoranDashboard.ShowEditingIcon = false;
             this.dgvRiwayatPenyetoranDashboard.ShowRowErrors = false;
-            this.dgvRiwayatPenyetoranDashboard.Size = new System.Drawing.Size(398, 271);
+            this.dgvRiwayatPenyetoranDashboard.Size = new System.Drawing.Size(265, 176);
             this.dgvRiwayatPenyetoranDashboard.TabIndex = 0;
             // 
             // panel1
@@ -118,9 +131,10 @@ namespace EcoCollect.Views
             this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.dgvRiwayatPenarikan);
-            this.panel1.Location = new System.Drawing.Point(896, 373);
+            this.panel1.Location = new System.Drawing.Point(597, 242);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(397, 271);
+            this.panel1.Size = new System.Drawing.Size(265, 176);
             this.panel1.TabIndex = 6;
             // 
             // dgvRiwayatPenarikan
@@ -130,14 +144,16 @@ namespace EcoCollect.Views
             this.dgvRiwayatPenarikan.AllowUserToResizeColumns = false;
             this.dgvRiwayatPenarikan.AllowUserToResizeRows = false;
             this.dgvRiwayatPenarikan.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dgvRiwayatPenarikan.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvRiwayatPenarikan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRiwayatPenarikan.GridColor = System.Drawing.Color.Black;
-            this.dgvRiwayatPenarikan.Location = new System.Drawing.Point(2, 1);
+            this.dgvRiwayatPenarikan.Location = new System.Drawing.Point(1, 1);
+            this.dgvRiwayatPenarikan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvRiwayatPenarikan.Name = "dgvRiwayatPenarikan";
             this.dgvRiwayatPenarikan.ReadOnly = true;
             this.dgvRiwayatPenarikan.RowHeadersWidth = 62;
             this.dgvRiwayatPenarikan.RowTemplate.Height = 28;
-            this.dgvRiwayatPenarikan.Size = new System.Drawing.Size(394, 273);
+            this.dgvRiwayatPenarikan.Size = new System.Drawing.Size(263, 177);
             this.dgvRiwayatPenarikan.TabIndex = 0;
             // 
             // lblSaldo
@@ -146,9 +162,10 @@ namespace EcoCollect.Views
             this.lblSaldo.BackColor = System.Drawing.Color.Transparent;
             this.lblSaldo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSaldo.ForeColor = System.Drawing.Color.White;
-            this.lblSaldo.Location = new System.Drawing.Point(515, 261);
+            this.lblSaldo.Location = new System.Drawing.Point(343, 170);
+            this.lblSaldo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSaldo.Name = "lblSaldo";
-            this.lblSaldo.Size = new System.Drawing.Size(67, 29);
+            this.lblSaldo.Size = new System.Drawing.Size(47, 20);
             this.lblSaldo.TabIndex = 7;
             this.lblSaldo.Text = "Rp 0";
             // 
@@ -157,9 +174,10 @@ namespace EcoCollect.Views
             this.lblTotalSetor.AutoSize = true;
             this.lblTotalSetor.BackColor = System.Drawing.Color.Transparent;
             this.lblTotalSetor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalSetor.Location = new System.Drawing.Point(806, 261);
+            this.lblTotalSetor.Location = new System.Drawing.Point(537, 170);
+            this.lblTotalSetor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTotalSetor.Name = "lblTotalSetor";
-            this.lblTotalSetor.Size = new System.Drawing.Size(67, 29);
+            this.lblTotalSetor.Size = new System.Drawing.Size(47, 20);
             this.lblTotalSetor.TabIndex = 8;
             this.lblTotalSetor.Text = "Rp 0";
             // 
@@ -168,30 +186,50 @@ namespace EcoCollect.Views
             this.lblTotalTarik.AutoSize = true;
             this.lblTotalTarik.BackColor = System.Drawing.Color.Transparent;
             this.lblTotalTarik.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalTarik.Location = new System.Drawing.Point(1103, 260);
+            this.lblTotalTarik.Location = new System.Drawing.Point(735, 169);
+            this.lblTotalTarik.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTotalTarik.Name = "lblTotalTarik";
-            this.lblTotalTarik.Size = new System.Drawing.Size(67, 29);
+            this.lblTotalTarik.Size = new System.Drawing.Size(47, 20);
             this.lblTotalTarik.TabIndex = 9;
             this.lblTotalTarik.Text = "Rp 0";
             // 
             // btnRiwayatKeuangan
             // 
             this.btnRiwayatKeuangan.BackColor = System.Drawing.Color.Transparent;
+            this.btnRiwayatKeuangan.FlatAppearance.BorderSize = 0;
+            this.btnRiwayatKeuangan.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnRiwayatKeuangan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnRiwayatKeuangan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRiwayatKeuangan.Location = new System.Drawing.Point(98, 327);
+            this.btnRiwayatKeuangan.Location = new System.Drawing.Point(19, 213);
+            this.btnRiwayatKeuangan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnRiwayatKeuangan.Name = "btnRiwayatKeuangan";
-            this.btnRiwayatKeuangan.Size = new System.Drawing.Size(275, 31);
+            this.btnRiwayatKeuangan.Size = new System.Drawing.Size(231, 20);
             this.btnRiwayatKeuangan.TabIndex = 10;
             this.btnRiwayatKeuangan.UseVisualStyleBackColor = false;
             this.btnRiwayatKeuangan.Click += new System.EventHandler(this.btnRiwayatKeuangan_Click);
             // 
+            // btnProfil
+            // 
+            this.btnProfil.BackColor = System.Drawing.Color.Transparent;
+            this.btnProfil.FlatAppearance.BorderSize = 0;
+            this.btnProfil.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnProfil.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnProfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProfil.Location = new System.Drawing.Point(19, 251);
+            this.btnProfil.Name = "btnProfil";
+            this.btnProfil.Size = new System.Drawing.Size(231, 24);
+            this.btnProfil.TabIndex = 11;
+            this.btnProfil.UseVisualStyleBackColor = false;
+            this.btnProfil.Click += new System.EventHandler(this.btnProfil_Click);
+            // 
             // FormDashboardNasabah
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::EcoCollect.Properties.Resources.P_A__1_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1341, 729);
+            this.ClientSize = new System.Drawing.Size(894, 474);
+            this.Controls.Add(this.btnProfil);
             this.Controls.Add(this.btnRiwayatKeuangan);
             this.Controls.Add(this.lblTotalTarik);
             this.Controls.Add(this.lblTotalSetor);
@@ -201,6 +239,7 @@ namespace EcoCollect.Views
             this.Controls.Add(this.button4);
             this.Controls.Add(this.btnFiturTarikSaldo);
             this.Controls.Add(this.btnLogoutNasabah);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormDashboardNasabah";
             this.Text = "FormDashboardNasabah";
             this.Load += new System.EventHandler(this.FormDashboardNasabah_Load);
@@ -226,5 +265,6 @@ namespace EcoCollect.Views
         private System.Windows.Forms.Label lblTotalSetor;
         private System.Windows.Forms.Label lblTotalTarik;
         private System.Windows.Forms.Button btnRiwayatKeuangan;
+        private System.Windows.Forms.Button btnProfil;
     }
 }
