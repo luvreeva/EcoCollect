@@ -82,8 +82,7 @@ ORDER BY ts.tanggal DESC";
 
             if (result == DialogResult.Yes)
             {
-                Session.IdPetugas = 0;
-                Session.NamaPetugas = "";
+                Session.ClearPetugas();
 
                 FormLoginPetugas login = new FormLoginPetugas();
                 login.Show();
@@ -102,6 +101,23 @@ ORDER BY ts.tanggal DESC";
         {
             LoadRiwayatSetorPetugas(tbCariRiwayatSetoran.Text);
         }
-        
+
+        private void btnKelolaJenisSampahPetugas_Click(object sender, EventArgs e)
+        {
+            KelolaJenisSampah form = new KelolaJenisSampah();
+            form.StartPosition = FormStartPosition.CenterScreen;
+            form.Show();
+
+            this.Hide();
+        }
+
+        private void btnLayananPenyetoran_Click(object sender, EventArgs e)
+        {
+            FormBuatSetoran form = new FormBuatSetoran();
+            form.StartPosition = FormStartPosition.CenterScreen;
+            form.Show();
+
+            this.Close();
+        }
     }
 }

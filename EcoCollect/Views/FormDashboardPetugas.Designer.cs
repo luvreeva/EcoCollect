@@ -56,6 +56,7 @@
             this.btnKelolaJenisSampah.Size = new System.Drawing.Size(300, 36);
             this.btnKelolaJenisSampah.TabIndex = 0;
             this.btnKelolaJenisSampah.UseVisualStyleBackColor = false;
+            this.btnKelolaJenisSampah.Click += new System.EventHandler(this.btnKelolaJenisSampah_Click);
             // 
             // btnSetorSampah
             // 
@@ -68,6 +69,7 @@
             this.btnSetorSampah.Size = new System.Drawing.Size(300, 38);
             this.btnSetorSampah.TabIndex = 1;
             this.btnSetorSampah.UseVisualStyleBackColor = false;
+            this.btnSetorSampah.Click += new System.EventHandler(this.btnSetorSampah_Click);
             // 
             // btnRiwayatSetorSampah
             // 
@@ -119,6 +121,7 @@
             this.btnSetorDashboardPetugas.Size = new System.Drawing.Size(227, 69);
             this.btnSetorDashboardPetugas.TabIndex = 5;
             this.btnSetorDashboardPetugas.UseVisualStyleBackColor = false;
+            this.btnSetorDashboardPetugas.Click += new System.EventHandler(this.btnSetorDashboardPetugas_Click);
             // 
             // btnKelolaSampahDashboardPetugas
             // 
@@ -131,6 +134,7 @@
             this.btnKelolaSampahDashboardPetugas.Size = new System.Drawing.Size(221, 69);
             this.btnKelolaSampahDashboardPetugas.TabIndex = 6;
             this.btnKelolaSampahDashboardPetugas.UseVisualStyleBackColor = false;
+            this.btnKelolaSampahDashboardPetugas.Click += new System.EventHandler(this.btnKelolaSampahDashboardPetugas_Click);
             // 
             // lbTotalNasabahDashboardPetugas
             // 

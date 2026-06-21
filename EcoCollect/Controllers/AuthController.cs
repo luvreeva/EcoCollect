@@ -61,9 +61,11 @@ WHERE username = @user AND password = @pass";
                     {
                         if (reader.Read())
                         {
-                            Session.IdNasabah = Convert.ToInt32(reader["id_nasabah"]);
-                            Session.NamaNasabah = reader["nama_lengkap"].ToString();
-                            Session.Username = reader["username"].ToString();
+                            Session.SetNasabah(
+                                Convert.ToInt32(reader["id_nasabah"]),
+                                reader["nama_lengkap"].ToString(),
+                                reader["username"].ToString()
+                            );
 
                             return true;
                         }
@@ -95,9 +97,11 @@ WHERE username = @user AND password = @pass";
                     {
                         if (reader.Read())
                         {
-                            Session.IdPetugas = Convert.ToInt32(reader["id_petugas"]);
-                            Session.NamaPetugas = reader["nama_lengkap"].ToString();
-                            Session.Username = reader["username"].ToString();
+                            Session.SetPetugas(
+                                Convert.ToInt32(reader["id_petugas"]),
+                                reader["nama_lengkap"].ToString(),
+                                reader["username"].ToString()
+                            );
 
                             return true;
                         }

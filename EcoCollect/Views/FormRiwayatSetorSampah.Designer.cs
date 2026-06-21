@@ -61,6 +61,7 @@
             this.btnKelolaJenisSampahPetugas.Size = new System.Drawing.Size(309, 41);
             this.btnKelolaJenisSampahPetugas.TabIndex = 1;
             this.btnKelolaJenisSampahPetugas.UseVisualStyleBackColor = false;
+            this.btnKelolaJenisSampahPetugas.Click += new System.EventHandler(this.btnKelolaJenisSampahPetugas_Click);
             // 
             // btnLayananPenyetoran
             // 
@@ -72,6 +73,7 @@
             this.btnLayananPenyetoran.Size = new System.Drawing.Size(309, 41);
             this.btnLayananPenyetoran.TabIndex = 2;
             this.btnLayananPenyetoran.UseVisualStyleBackColor = false;
+            this.btnLayananPenyetoran.Click += new System.EventHandler(this.btnLayananPenyetoran_Click);
             // 
             // btnLogout
             // 

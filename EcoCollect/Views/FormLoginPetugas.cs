@@ -58,10 +58,10 @@ namespace EcoCollect.Views
             if (berhasil)
             {
                 MessageBox.Show(
-                    "Login sebagai " + Session.NamaPetugas,
-                    "Sukses",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Information);
+                "Login sebagai " + Session.NamaPetugas,
+                "Sukses",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information);
 
                 FormDashboardPetugas dashboard = new FormDashboardPetugas();
                 dashboard.Show();

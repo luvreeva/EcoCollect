@@ -30,8 +30,7 @@ namespace EcoCollect.Views
 
             if (result == DialogResult.Yes)
             {
-                Session.IdPetugas = 0;
-                Session.NamaPetugas = "";
+                Session.ClearPetugas();
 
                 FormLoginPetugas login = new FormLoginPetugas();
                 login.Show();
@@ -62,11 +61,10 @@ namespace EcoCollect.Views
                 NpgsqlCommand cmdTransaksi = new NpgsqlCommand(qTransaksi, conn);
                 lbTotalTransaksiDashboardPetugas.Text = cmdTransaksi.ExecuteScalar().ToString();
 
-                string qSampah = @"
-SELECT COALESCE(SUM(d.berat_kg),0)
-FROM detail_setor d
-JOIN transaksi_setor ts ON d.id_setor = ts.id_setor
-WHERE ts.id_petugas = @idPetugas";
+                string qSampah = @"SELECT COALESCE(SUM(d.berat_kg),0)
+                                    FROM detail_setor d
+                                    JOIN transaksi_setor ts ON d.id_setor = ts.id_setor
+                                    WHERE ts.id_petugas = @idPetugas";
 
                 NpgsqlCommand cmdSampah = new NpgsqlCommand(qSampah, conn);
                 cmdSampah.Parameters.AddWithValue("@idPetugas", Session.IdPetugas);
@@ -83,18 +81,17 @@ WHERE ts.id_petugas = @idPetugas";
 
         private void LoadRiwayat()
         {
-            string query = @"
-SELECT 
-    ts.kode_transaksi AS Kode,
-    n.nama_lengkap AS Nasabah,
-    p.nama_lengkap AS Petugas,
-    ts.tanggal AS Tanggal,
-    ts.total_nilai AS Total
-FROM transaksi_setor ts
-JOIN nasabah n ON ts.id_nasabah = n.id_nasabah
-JOIN petugas p ON ts.id_petugas = p.id_petugas
-WHERE ts.id_petugas = @idPetugas
-ORDER BY ts.tanggal DESC";
+            string query = @"SELECT 
+                            ts.kode_transaksi AS Kode,
+                            n.nama_lengkap AS Nasabah,
+                            p.nama_lengkap AS Petugas,
+                            ts.tanggal AS Tanggal,
+                            ts.total_nilai AS Total
+                        FROM transaksi_setor ts
+                        JOIN nasabah n ON ts.id_nasabah = n.id_nasabah
+                        JOIN petugas p ON ts.id_petugas = p.id_petugas
+                        WHERE ts.id_petugas = @idPetugas
+                        ORDER BY ts.tanggal DESC";
 
             using (NpgsqlConnection conn = Config.DbConnection.GetConnection())
             {
@@ -126,6 +123,42 @@ ORDER BY ts.tanggal DESC";
             FormRiwayatSetorSampah frm = new FormRiwayatSetorSampah(this);
             frm.StartPosition = FormStartPosition.CenterScreen;
             frm.Show();
+            this.Hide();
+        }
+
+        private void btnKelolaJenisSampah_Click(object sender, EventArgs e)
+        {
+            KelolaJenisSampah form = new KelolaJenisSampah();
+            form.StartPosition = FormStartPosition.CenterScreen;
+            form.Show();
+
+            this.Hide();
+        }
+
+        private void btnSetorSampah_Click(object sender, EventArgs e)
+        {
+            LayananPenyetoran form = new LayananPenyetoran(Session.IdNasabah);
+            form.StartPosition = FormStartPosition.CenterScreen;
+            form.Show();
+
+            this.Hide();
+        }
+
+        private void btnSetorDashboardPetugas_Click(object sender, EventArgs e)
+        {
+            LayananPenyetoran form = new LayananPenyetoran(Session.IdNasabah);
+            form.StartPosition = FormStartPosition.CenterScreen;
+            form.Show();
+
+            this.Hide();
+        }
+
+        private void btnKelolaSampahDashboardPetugas_Click(object sender, EventArgs e)
+        {
+            KelolaJenisSampah form = new KelolaJenisSampah();
+            form.StartPosition = FormStartPosition.CenterScreen;
+            form.Show();
+
             this.Hide();
         }
     }
