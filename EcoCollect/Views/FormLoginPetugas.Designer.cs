@@ -39,8 +39,8 @@
             // 
             this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUsername.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(345, 220);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUsername.Location = new System.Drawing.Point(349, 221);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(501, 28);
             this.txtUsername.TabIndex = 0;
@@ -50,8 +50,8 @@
             // 
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPassword.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(345, 306);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPassword.Location = new System.Drawing.Point(349, 306);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(501, 28);
             this.txtPassword.TabIndex = 1;
@@ -63,7 +63,7 @@
             this.btnMasuk.FlatAppearance.BorderSize = 0;
             this.btnMasuk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMasuk.Location = new System.Drawing.Point(469, 364);
-            this.btnMasuk.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMasuk.Margin = new System.Windows.Forms.Padding(4);
             this.btnMasuk.Name = "btnMasuk";
             this.btnMasuk.Size = new System.Drawing.Size(244, 34);
             this.btnMasuk.TabIndex = 2;
@@ -76,7 +76,7 @@
             this.btnKeBeranda.FlatAppearance.BorderSize = 0;
             this.btnKeBeranda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKeBeranda.Location = new System.Drawing.Point(493, 444);
-            this.btnKeBeranda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnKeBeranda.Margin = new System.Windows.Forms.Padding(4);
             this.btnKeBeranda.Name = "btnKeBeranda";
             this.btnKeBeranda.Size = new System.Drawing.Size(200, 20);
             this.btnKeBeranda.TabIndex = 3;
@@ -90,15 +90,16 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1192, 583);
-            this.Controls.Add(this.btnKeBeranda);
-            this.Controls.Add(this.btnMasuk);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Controls.Add(this.btnKeBeranda);
+            this.Controls.Add(this.btnMasuk);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormLoginPetugas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormLoginPetugas";
             this.Load += new System.EventHandler(this.FormLoginPetugas_Load);
+            this.Resize += new System.EventHandler(this.FormLoginPetugas_Resize);
             this.ResumeLayout(false);
             this.PerformLayout();
 

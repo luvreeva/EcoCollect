@@ -73,6 +73,11 @@ namespace EcoCollect.Views
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void FormLoginPetugas_Resize(object sender, EventArgs e)
+        {
+
+        }
     }
     
 }

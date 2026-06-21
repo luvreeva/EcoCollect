@@ -173,9 +173,9 @@
             this.lbTotalSampahDashboardPetugas.BackColor = System.Drawing.Color.Transparent;
             this.lbTotalSampahDashboardPetugas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbTotalSampahDashboardPetugas.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTotalSampahDashboardPetugas.Location = new System.Drawing.Point(1016, 274);
+            this.lbTotalSampahDashboardPetugas.Location = new System.Drawing.Point(1026, 279);
             this.lbTotalSampahDashboardPetugas.Name = "lbTotalSampahDashboardPetugas";
-            this.lbTotalSampahDashboardPetugas.Size = new System.Drawing.Size(36, 18);
+            this.lbTotalSampahDashboardPetugas.Size = new System.Drawing.Size(26, 18);
             this.lbTotalSampahDashboardPetugas.TabIndex = 10;
             this.lbTotalSampahDashboardPetugas.Text = "0";
             this.lbTotalSampahDashboardPetugas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
