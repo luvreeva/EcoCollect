@@ -1,4 +1,4 @@
-﻿namespace LAYANANPETUGAS
+﻿namespace EcoCollect.Views
 {
     partial class ItemSampah
     {
@@ -28,25 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pbThumbnail = new System.Windows.Forms.PictureBox();
             this.lblNamaSampah = new System.Windows.Forms.Label();
             this.lblDeskripsi = new System.Windows.Forms.Label();
             this.lblHarga = new System.Windows.Forms.Label();
             this.btnHapusItem = new System.Windows.Forms.Button();
             this.btnEditItem = new System.Windows.Forms.Button();
+            this.pbThumbnail = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbThumbnail)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pbThumbnail
-            // 
-            this.pbThumbnail.BackColor = System.Drawing.Color.DarkGray;
-            this.pbThumbnail.Location = new System.Drawing.Point(5, 7);
-            this.pbThumbnail.Name = "pbThumbnail";
-            this.pbThumbnail.Size = new System.Drawing.Size(38, 34);
-            this.pbThumbnail.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbThumbnail.TabIndex = 0;
-            this.pbThumbnail.TabStop = false;
-            this.pbThumbnail.Click += new System.EventHandler(this.pbThumbnail_Click);
             // 
             // lblNamaSampah
             // 
@@ -56,9 +45,8 @@
             this.lblNamaSampah.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(113)))), ((int)(((byte)(121)))));
             this.lblNamaSampah.Location = new System.Drawing.Point(57, 7);
             this.lblNamaSampah.Name = "lblNamaSampah";
-            this.lblNamaSampah.Size = new System.Drawing.Size(9, 12);
+            this.lblNamaSampah.Size = new System.Drawing.Size(0, 12);
             this.lblNamaSampah.TabIndex = 1;
-            this.lblNamaSampah.Text = "-";
             this.lblNamaSampah.Click += new System.EventHandler(this.lblNamaSampah_Click);
             // 
             // lblDeskripsi
@@ -88,12 +76,12 @@
             // btnHapusItem
             // 
             this.btnHapusItem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnHapusItem.BackColor = System.Drawing.Color.White;
+            this.btnHapusItem.BackColor = System.Drawing.Color.Transparent;
             this.btnHapusItem.FlatAppearance.BorderSize = 0;
             this.btnHapusItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHapusItem.Font = new System.Drawing.Font("Segoe UI", 4.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHapusItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnHapusItem.Location = new System.Drawing.Point(221, 10);
+            this.btnHapusItem.Location = new System.Drawing.Point(223, 10);
             this.btnHapusItem.Name = "btnHapusItem";
             this.btnHapusItem.Size = new System.Drawing.Size(42, 23);
             this.btnHapusItem.TabIndex = 4;
@@ -104,7 +92,7 @@
             // btnEditItem
             // 
             this.btnEditItem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEditItem.BackColor = System.Drawing.Color.White;
+            this.btnEditItem.BackColor = System.Drawing.Color.Transparent;
             this.btnEditItem.FlatAppearance.BorderSize = 0;
             this.btnEditItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditItem.Font = new System.Drawing.Font("Segoe UI", 4.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -116,6 +104,17 @@
             this.btnEditItem.Text = "Edit";
             this.btnEditItem.UseVisualStyleBackColor = false;
             this.btnEditItem.Click += new System.EventHandler(this.btnEditItem_Click);
+            // 
+            // pbThumbnail
+            // 
+            this.pbThumbnail.BackColor = System.Drawing.Color.Gray;
+            this.pbThumbnail.Location = new System.Drawing.Point(5, 7);
+            this.pbThumbnail.Name = "pbThumbnail";
+            this.pbThumbnail.Size = new System.Drawing.Size(38, 34);
+            this.pbThumbnail.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbThumbnail.TabIndex = 0;
+            this.pbThumbnail.TabStop = false;
+            this.pbThumbnail.Click += new System.EventHandler(this.pbThumbnail_Click);
             // 
             // ItemSampah
             // 

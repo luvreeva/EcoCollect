@@ -1,4 +1,4 @@
-﻿namespace LAYANANPETUGAS
+﻿namespace EcoCollect.Views
 {
     partial class FormBuatSetoran
     {
@@ -38,6 +38,9 @@
             this.panelNasabah1 = new System.Windows.Forms.Panel();
             this.lblDetailNasabah1 = new System.Windows.Forms.Label();
             this.lblNamaNasabah1 = new System.Windows.Forms.Label();
+            this.btnLogOut = new System.Windows.Forms.Button();
+            this.btnRiwayatSetorSampah = new System.Windows.Forms.Button();
+            this.btnSetorDashboardPetugas = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistoriSetoran)).BeginInit();
             this.panelNasabah1.SuspendLayout();
             this.SuspendLayout();
@@ -84,6 +87,7 @@
             // btnBuatSetoran
             // 
             this.btnBuatSetoran.BackColor = System.Drawing.Color.Transparent;
+            this.btnBuatSetoran.FlatAppearance.BorderSize = 0;
             this.btnBuatSetoran.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuatSetoran.Location = new System.Drawing.Point(481, 296);
             this.btnBuatSetoran.Name = "btnBuatSetoran";
@@ -95,6 +99,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(12, 192);
             this.button1.Name = "button1";
@@ -105,6 +110,7 @@
             // btnKelolaJenisSampah
             // 
             this.btnKelolaJenisSampah.BackColor = System.Drawing.Color.Transparent;
+            this.btnKelolaJenisSampah.FlatAppearance.BorderSize = 0;
             this.btnKelolaJenisSampah.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKelolaJenisSampah.Location = new System.Drawing.Point(12, 151);
             this.btnKelolaJenisSampah.Name = "btnKelolaJenisSampah";
@@ -147,6 +153,42 @@
             this.lblNamaNasabah1.Text = "Amanda Manopo";
             this.lblNamaNasabah1.Click += new System.EventHandler(this.panelNasabah1_Click);
             // 
+            // btnLogOut
+            // 
+            this.btnLogOut.BackColor = System.Drawing.Color.Transparent;
+            this.btnLogOut.FlatAppearance.BorderSize = 0;
+            this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogOut.Location = new System.Drawing.Point(12, 403);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Size = new System.Drawing.Size(215, 35);
+            this.btnLogOut.TabIndex = 7;
+            this.btnLogOut.UseVisualStyleBackColor = false;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
+            // 
+            // btnRiwayatSetorSampah
+            // 
+            this.btnRiwayatSetorSampah.BackColor = System.Drawing.Color.Transparent;
+            this.btnRiwayatSetorSampah.FlatAppearance.BorderSize = 0;
+            this.btnRiwayatSetorSampah.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRiwayatSetorSampah.Location = new System.Drawing.Point(12, 233);
+            this.btnRiwayatSetorSampah.Name = "btnRiwayatSetorSampah";
+            this.btnRiwayatSetorSampah.Size = new System.Drawing.Size(215, 35);
+            this.btnRiwayatSetorSampah.TabIndex = 8;
+            this.btnRiwayatSetorSampah.UseVisualStyleBackColor = false;
+            this.btnRiwayatSetorSampah.Click += new System.EventHandler(this.btnRiwayatSetorSampah_Click);
+            // 
+            // btnSetorDashboardPetugas
+            // 
+            this.btnSetorDashboardPetugas.BackColor = System.Drawing.Color.Transparent;
+            this.btnSetorDashboardPetugas.FlatAppearance.BorderSize = 0;
+            this.btnSetorDashboardPetugas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSetorDashboardPetugas.Location = new System.Drawing.Point(12, 110);
+            this.btnSetorDashboardPetugas.Name = "btnSetorDashboardPetugas";
+            this.btnSetorDashboardPetugas.Size = new System.Drawing.Size(215, 35);
+            this.btnSetorDashboardPetugas.TabIndex = 9;
+            this.btnSetorDashboardPetugas.UseVisualStyleBackColor = false;
+            this.btnSetorDashboardPetugas.Click += new System.EventHandler(this.btnSetorDashboardPetugas_Click);
+            // 
             // FormBuatSetoran
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -154,6 +196,9 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnSetorDashboardPetugas);
+            this.Controls.Add(this.btnRiwayatSetorSampah);
+            this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.panelNasabah1);
             this.Controls.Add(this.btnKelolaJenisSampah);
             this.Controls.Add(this.button1);
@@ -164,6 +209,7 @@
             this.Name = "FormBuatSetoran";
             this.Text = "FormBuatSetoran";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormBuatSetoran_FormClosed);
+            this.Load += new System.EventHandler(this.FormBuatSetoran_Load_1);
             this.Click += new System.EventHandler(this.FormBuatSetoran_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistoriSetoran)).EndInit();
             this.panelNasabah1.ResumeLayout(false);
@@ -184,5 +230,8 @@
         private System.Windows.Forms.Panel panelNasabah1;
         private System.Windows.Forms.Label lblDetailNasabah1;
         private System.Windows.Forms.Label lblNamaNasabah1;
+        private System.Windows.Forms.Button btnLogOut;
+        private System.Windows.Forms.Button btnRiwayatSetorSampah;
+        private System.Windows.Forms.Button btnSetorDashboardPetugas;
     }
 }

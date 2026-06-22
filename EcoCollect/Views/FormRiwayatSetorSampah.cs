@@ -16,10 +16,11 @@ namespace EcoCollect.Views
     public partial class FormRiwayatSetorSampah : Form
     {
         private FormDashboardPetugas dashboardRef;
-        public FormRiwayatSetorSampah(FormDashboardPetugas dashboard)
+        public FormRiwayatSetorSampah()
         {
             InitializeComponent();
-            dashboardRef = dashboard;
+           // dashboardRef = dashboard;
+            //ormDashboardPetugas dashboard
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

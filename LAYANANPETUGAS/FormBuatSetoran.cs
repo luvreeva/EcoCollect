@@ -1,4 +1,8 @@
-﻿using System;
+﻿using EcoCollect.Helpers;
+using EcoCollect.Config;
+using EcoCollect.Helpers;
+using Npgsql;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,9 +11,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Npgsql;
 
-namespace LAYANANPETUGAS
+namespace EcoCollect.Views
 {
     public partial class FormBuatSetoran : Form
     {
@@ -21,7 +24,7 @@ namespace LAYANANPETUGAS
         {
             try
             {
-                using (NpgsqlConnection conn = Koneksi.GetConnection())
+                using (NpgsqlConnection conn = DbConnection.GetConnection())
                 {
                     conn.Open();
                     string queryStatistik = @"
@@ -86,11 +89,11 @@ namespace LAYANANPETUGAS
         {
             try
             {
-                using (NpgsqlConnection conn = Koneksi.GetConnection())
+                using (NpgsqlConnection conn = DbConnection.GetConnection())
                 {
                     conn.Open();
 
-                    string queryListTengah = "SELECT id_nasabah, nama, no_hp FROM nasabah WHERE id_nasabah = 1";
+                    string queryListTengah = "SELECT id_nasabah, nama_lengkap, no_hp FROM nasabah";
 
                     using (NpgsqlCommand cmdTengah = new NpgsqlCommand(queryListTengah, conn))
                     {
@@ -110,7 +113,9 @@ namespace LAYANANPETUGAS
                         }
                     }
                 }
-                UpdateStatistikDanHistori(1);
+                dgvHistoriSetoran.DataSource = null;
+                lblFrekuensiSetor.Text = "0 kali";
+                lblTotalMassa.Text = "0 kg";
             }
             catch (Exception ex)
             {
@@ -143,7 +148,7 @@ namespace LAYANANPETUGAS
             else
             {
                 // Jaga-jaga kalau misal Form1 belum terbuat (bikin baru)
-                Form1 newFrm1 = new Form1();
+                KelolaJenisSampah newFrm1 = new KelolaJenisSampah();
                 newFrm1.Show();
             }
 
@@ -164,7 +169,7 @@ namespace LAYANANPETUGAS
                 int idNasabahAktif = Convert.ToInt32(lblNamaNasabah1.Tag);
 
                 // Buka form transaksi baru sebagai dialog box (pop-up)
-                FormTransaksiBaru formTrans = new FormTransaksiBaru(idNasabahAktif);
+                LayananPenyetoran formTrans = new LayananPenyetoran(idNasabahAktif);
                 formTrans.ShowDialog();
 
                 // Refresh otomatis sisi kanan setelah pop-up ditutup
@@ -175,6 +180,45 @@ namespace LAYANANPETUGAS
                 // Jaga-jaga kalau pas aplikasi jalan, data belum ke-load dari database
                 MessageBox.Show("Silakan pilih atau pastikan data nasabah sudah muncul!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void FormBuatSetoran_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+            "Yakin ingin logout?",
+            "Konfirmasi",
+            MessageBoxButtons.YesNo,
+            MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                Session.ClearPetugas();
+
+                FormLoginPetugas login = new FormLoginPetugas();
+                login.Show();
+                this.Close();
+            }
+        }
+
+        private void btnRiwayatSetorSampah_Click(object sender, EventArgs e)
+        {
+            FormRiwayatSetorSampah frm = new FormRiwayatSetorSampah();
+            frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.Show();
+            this.Hide();
+        }
+
+        private void btnSetorDashboardPetugas_Click(object sender, EventArgs e)
+        {
+            FormRiwayatSetorSampah frm = new FormRiwayatSetorSampah();
+            frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.Show();
+            this.Hide();
         }
     }
 }

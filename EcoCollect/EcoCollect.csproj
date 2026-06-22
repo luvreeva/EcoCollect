@@ -87,13 +87,37 @@
     </Compile>
     <Compile Include="Helpers\Session.cs" />
     <Compile Include="Models\M_User.cs" />
+    <Compile Include="NasabahItemControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NasabahItemControl.Designer.cs">
+      <DependentUpon>NasabahItemControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\ItemSampah.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ItemSampah.Designer.cs">
+      <DependentUpon>ItemSampah.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\KelolaJenisSampah.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\KelolaJenisSampah.Designer.cs">
+      <DependentUpon>KelolaJenisSampah.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\FormBeranda.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\FormBeranda.Designer.cs">
       <DependentUpon>FormBeranda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FormBuatSetoran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FormBuatSetoran.Designer.cs">
+      <DependentUpon>FormBuatSetoran.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\FormDashboardPetugas.cs">
       <SubType>Form</SubType>
@@ -125,6 +149,15 @@
     <Compile Include="Views\FormRiwayatSetorSampah.Designer.cs">
       <DependentUpon>FormRiwayatSetorSampah.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\LayananPenyetoran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\LayananPenyetoran.Designer.cs">
+      <DependentUpon>LayananPenyetoran.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="NasabahItemControl.resx">
+      <DependentUpon>NasabahItemControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -135,8 +168,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Views\ItemSampah.resx">
+      <DependentUpon>ItemSampah.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\KelolaJenisSampah.resx">
+      <DependentUpon>KelolaJenisSampah.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\FormBeranda.resx">
       <DependentUpon>FormBeranda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormBuatSetoran.resx">
+      <DependentUpon>FormBuatSetoran.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\FormDashboardPetugas.resx">
       <DependentUpon>FormDashboardPetugas.cs</DependentUpon>
@@ -152,6 +194,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\FormRiwayatSetorSampah.resx">
       <DependentUpon>FormRiwayatSetorSampah.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LayananPenyetoran.resx">
+      <DependentUpon>LayananPenyetoran.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

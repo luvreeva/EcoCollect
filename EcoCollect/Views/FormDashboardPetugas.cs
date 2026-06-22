@@ -115,7 +115,7 @@ ORDER BY ts.tanggal DESC";
 
         private void btnRiwayatSetorSampah_Click(object sender, EventArgs e)
         {
-            FormRiwayatSetorSampah frm = new FormRiwayatSetorSampah(this);
+            FormRiwayatSetorSampah frm = new FormRiwayatSetorSampah();
             frm.StartPosition = FormStartPosition.CenterScreen;
             frm.Show();
             this.Hide();
@@ -123,7 +123,7 @@ ORDER BY ts.tanggal DESC";
 
         private void btnRiwayatDashboardPetugas_Click(object sender, EventArgs e)
         {
-            FormRiwayatSetorSampah frm = new FormRiwayatSetorSampah(this);
+            FormRiwayatSetorSampah frm = new FormRiwayatSetorSampah();
             frm.StartPosition = FormStartPosition.CenterScreen;
             frm.Show();
             this.Hide();
