@@ -4,7 +4,7 @@ namespace EcoCollect.Config
 {
     public static class DbConnection
     {
-        private static string connString = "Host=localhost;Port=5432;Username=postgres;Password=Dharma23;Database=eco-collect";
+        private static string connString = "Host=localhost;Port=5432;Username=postgres;Password=vea123;Database=db_ecocollect";
 
         public static NpgsqlConnection GetConnection()
         {

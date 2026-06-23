@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.btnDashboardPetugas = new System.Windows.Forms.Button();
-            this.btnKelolaJenisSampahPetugas = new System.Windows.Forms.Button();
-            this.btnLayananPenyetoran = new System.Windows.Forms.Button();
+            this.btnFormKelolaJenisSampahPetugas = new System.Windows.Forms.Button();
+            this.btnFormLayananPenyetoran = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.tbCariRiwayatSetoran = new System.Windows.Forms.TextBox();
             this.panelRekap = new System.Windows.Forms.Panel();
@@ -51,27 +51,27 @@
             this.btnDashboardPetugas.UseVisualStyleBackColor = false;
             this.btnDashboardPetugas.Click += new System.EventHandler(this.btnDashboardPetugas_Click);
             // 
-            // btnKelolaJenisSampahPetugas
+            // btnFormKelolaJenisSampahPetugas
             // 
-            this.btnKelolaJenisSampahPetugas.BackColor = System.Drawing.Color.Transparent;
-            this.btnKelolaJenisSampahPetugas.FlatAppearance.BorderSize = 0;
-            this.btnKelolaJenisSampahPetugas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnKelolaJenisSampahPetugas.Location = new System.Drawing.Point(24, 201);
-            this.btnKelolaJenisSampahPetugas.Name = "btnKelolaJenisSampahPetugas";
-            this.btnKelolaJenisSampahPetugas.Size = new System.Drawing.Size(309, 41);
-            this.btnKelolaJenisSampahPetugas.TabIndex = 1;
-            this.btnKelolaJenisSampahPetugas.UseVisualStyleBackColor = false;
+            this.btnFormKelolaJenisSampahPetugas.BackColor = System.Drawing.Color.Transparent;
+            this.btnFormKelolaJenisSampahPetugas.FlatAppearance.BorderSize = 0;
+            this.btnFormKelolaJenisSampahPetugas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFormKelolaJenisSampahPetugas.Location = new System.Drawing.Point(24, 201);
+            this.btnFormKelolaJenisSampahPetugas.Name = "btnFormKelolaJenisSampahPetugas";
+            this.btnFormKelolaJenisSampahPetugas.Size = new System.Drawing.Size(309, 41);
+            this.btnFormKelolaJenisSampahPetugas.TabIndex = 1;
+            this.btnFormKelolaJenisSampahPetugas.UseVisualStyleBackColor = false;
             // 
-            // btnLayananPenyetoran
+            // btnFormLayananPenyetoran
             // 
-            this.btnLayananPenyetoran.BackColor = System.Drawing.Color.Transparent;
-            this.btnLayananPenyetoran.FlatAppearance.BorderSize = 0;
-            this.btnLayananPenyetoran.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLayananPenyetoran.Location = new System.Drawing.Point(24, 252);
-            this.btnLayananPenyetoran.Name = "btnLayananPenyetoran";
-            this.btnLayananPenyetoran.Size = new System.Drawing.Size(309, 41);
-            this.btnLayananPenyetoran.TabIndex = 2;
-            this.btnLayananPenyetoran.UseVisualStyleBackColor = false;
+            this.btnFormLayananPenyetoran.BackColor = System.Drawing.Color.Transparent;
+            this.btnFormLayananPenyetoran.FlatAppearance.BorderSize = 0;
+            this.btnFormLayananPenyetoran.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFormLayananPenyetoran.Location = new System.Drawing.Point(24, 252);
+            this.btnFormLayananPenyetoran.Name = "btnFormLayananPenyetoran";
+            this.btnFormLayananPenyetoran.Size = new System.Drawing.Size(309, 41);
+            this.btnFormLayananPenyetoran.TabIndex = 2;
+            this.btnFormLayananPenyetoran.UseVisualStyleBackColor = false;
             // 
             // btnLogout
             // 
@@ -135,8 +135,8 @@
             this.Controls.Add(this.panelRekap);
             this.Controls.Add(this.tbCariRiwayatSetoran);
             this.Controls.Add(this.btnLogout);
-            this.Controls.Add(this.btnLayananPenyetoran);
-            this.Controls.Add(this.btnKelolaJenisSampahPetugas);
+            this.Controls.Add(this.btnFormLayananPenyetoran);
+            this.Controls.Add(this.btnFormKelolaJenisSampahPetugas);
             this.Controls.Add(this.btnDashboardPetugas);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -154,8 +154,8 @@
         #endregion
 
         private System.Windows.Forms.Button btnDashboardPetugas;
-        private System.Windows.Forms.Button btnKelolaJenisSampahPetugas;
-        private System.Windows.Forms.Button btnLayananPenyetoran;
+        private System.Windows.Forms.Button btnFormKelolaJenisSampahPetugas;
+        private System.Windows.Forms.Button btnFormLayananPenyetoran;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.TextBox tbCariRiwayatSetoran;
         private System.Windows.Forms.Panel panelRekap;

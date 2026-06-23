@@ -63,6 +63,16 @@ namespace EcoCollect.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap nasabah_R__2_ {
+            get {
+                object obj = ResourceManager.GetObject("nasabah R (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap P_A {
             get {
                 object obj = ResourceManager.GetObject("P A", resourceCulture);
@@ -86,6 +96,46 @@ namespace EcoCollect.Properties {
         internal static System.Drawing.Bitmap P_A__1_1 {
             get {
                 object obj = ResourceManager.GetObject("P A (1)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap P_A__10_ {
+            get {
+                object obj = ResourceManager.GetObject("P A (10)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap P_A__11_ {
+            get {
+                object obj = ResourceManager.GetObject("P A (11)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap P_A__12_ {
+            get {
+                object obj = ResourceManager.GetObject("P A (12)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap P_A__12_1 {
+            get {
+                object obj = ResourceManager.GetObject("P A (12)1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

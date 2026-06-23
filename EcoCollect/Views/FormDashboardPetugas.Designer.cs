@@ -28,8 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnKelolaJenisSampah = new System.Windows.Forms.Button();
-            this.btnSetorSampah = new System.Windows.Forms.Button();
+            this.btnFormKelolaJenisSampah = new System.Windows.Forms.Button();
             this.btnRiwayatSetorSampah = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnRiwayatDashboardPetugas = new System.Windows.Forms.Button();
@@ -41,43 +40,33 @@
             this.lbTotalSampahDashboardPetugas = new System.Windows.Forms.Label();
             this.mainPanel = new System.Windows.Forms.Panel();
             this.dgvRiwayatDashboardPetugas = new System.Windows.Forms.DataGridView();
+            this.btnSetorSampah = new System.Windows.Forms.Button();
             this.mainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRiwayatDashboardPetugas)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnKelolaJenisSampah
+            // btnFormKelolaJenisSampah
             // 
-            this.btnKelolaJenisSampah.BackColor = System.Drawing.Color.Transparent;
-            this.btnKelolaJenisSampah.FlatAppearance.BorderSize = 0;
-            this.btnKelolaJenisSampah.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnKelolaJenisSampah.Location = new System.Drawing.Point(32, 204);
-            this.btnKelolaJenisSampah.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnKelolaJenisSampah.Name = "btnKelolaJenisSampah";
-            this.btnKelolaJenisSampah.Size = new System.Drawing.Size(300, 36);
-            this.btnKelolaJenisSampah.TabIndex = 0;
-            this.btnKelolaJenisSampah.UseVisualStyleBackColor = false;
-            // 
-            // btnSetorSampah
-            // 
-            this.btnSetorSampah.BackColor = System.Drawing.Color.Transparent;
-            this.btnSetorSampah.FlatAppearance.BorderSize = 0;
-            this.btnSetorSampah.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSetorSampah.Location = new System.Drawing.Point(32, 254);
-            this.btnSetorSampah.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnSetorSampah.Name = "btnSetorSampah";
-            this.btnSetorSampah.Size = new System.Drawing.Size(300, 38);
-            this.btnSetorSampah.TabIndex = 1;
-            this.btnSetorSampah.UseVisualStyleBackColor = false;
+            this.btnFormKelolaJenisSampah.BackColor = System.Drawing.Color.Transparent;
+            this.btnFormKelolaJenisSampah.FlatAppearance.BorderSize = 0;
+            this.btnFormKelolaJenisSampah.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFormKelolaJenisSampah.Location = new System.Drawing.Point(36, 255);
+            this.btnFormKelolaJenisSampah.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnFormKelolaJenisSampah.Name = "btnFormKelolaJenisSampah";
+            this.btnFormKelolaJenisSampah.Size = new System.Drawing.Size(338, 45);
+            this.btnFormKelolaJenisSampah.TabIndex = 0;
+            this.btnFormKelolaJenisSampah.UseVisualStyleBackColor = false;
+            this.btnFormKelolaJenisSampah.Click += new System.EventHandler(this.btnFormKelolaJenisSampah_Click);
             // 
             // btnRiwayatSetorSampah
             // 
             this.btnRiwayatSetorSampah.BackColor = System.Drawing.Color.Transparent;
             this.btnRiwayatSetorSampah.FlatAppearance.BorderSize = 0;
             this.btnRiwayatSetorSampah.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRiwayatSetorSampah.Location = new System.Drawing.Point(32, 304);
+            this.btnRiwayatSetorSampah.Location = new System.Drawing.Point(36, 380);
             this.btnRiwayatSetorSampah.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRiwayatSetorSampah.Name = "btnRiwayatSetorSampah";
-            this.btnRiwayatSetorSampah.Size = new System.Drawing.Size(299, 39);
+            this.btnRiwayatSetorSampah.Size = new System.Drawing.Size(336, 49);
             this.btnRiwayatSetorSampah.TabIndex = 2;
             this.btnRiwayatSetorSampah.UseVisualStyleBackColor = false;
             this.btnRiwayatSetorSampah.Click += new System.EventHandler(this.btnRiwayatSetorSampah_Click);
@@ -87,10 +76,10 @@
             this.btnLogout.BackColor = System.Drawing.Color.Transparent;
             this.btnLogout.FlatAppearance.BorderSize = 0;
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogout.Location = new System.Drawing.Point(31, 523);
+            this.btnLogout.Location = new System.Drawing.Point(35, 654);
             this.btnLogout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(300, 39);
+            this.btnLogout.Size = new System.Drawing.Size(338, 49);
             this.btnLogout.TabIndex = 3;
             this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
@@ -100,10 +89,10 @@
             this.btnRiwayatDashboardPetugas.BackColor = System.Drawing.Color.Transparent;
             this.btnRiwayatDashboardPetugas.FlatAppearance.BorderSize = 0;
             this.btnRiwayatDashboardPetugas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRiwayatDashboardPetugas.Location = new System.Drawing.Point(400, 172);
+            this.btnRiwayatDashboardPetugas.Location = new System.Drawing.Point(450, 215);
             this.btnRiwayatDashboardPetugas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRiwayatDashboardPetugas.Name = "btnRiwayatDashboardPetugas";
-            this.btnRiwayatDashboardPetugas.Size = new System.Drawing.Size(223, 69);
+            this.btnRiwayatDashboardPetugas.Size = new System.Drawing.Size(251, 86);
             this.btnRiwayatDashboardPetugas.TabIndex = 4;
             this.btnRiwayatDashboardPetugas.UseVisualStyleBackColor = false;
             this.btnRiwayatDashboardPetugas.Click += new System.EventHandler(this.btnRiwayatDashboardPetugas_Click);
@@ -113,10 +102,10 @@
             this.btnSetorDashboardPetugas.BackColor = System.Drawing.Color.Transparent;
             this.btnSetorDashboardPetugas.FlatAppearance.BorderSize = 0;
             this.btnSetorDashboardPetugas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSetorDashboardPetugas.Location = new System.Drawing.Point(653, 172);
+            this.btnSetorDashboardPetugas.Location = new System.Drawing.Point(735, 215);
             this.btnSetorDashboardPetugas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSetorDashboardPetugas.Name = "btnSetorDashboardPetugas";
-            this.btnSetorDashboardPetugas.Size = new System.Drawing.Size(227, 69);
+            this.btnSetorDashboardPetugas.Size = new System.Drawing.Size(255, 86);
             this.btnSetorDashboardPetugas.TabIndex = 5;
             this.btnSetorDashboardPetugas.UseVisualStyleBackColor = false;
             // 
@@ -125,10 +114,10 @@
             this.btnKelolaSampahDashboardPetugas.BackColor = System.Drawing.Color.Transparent;
             this.btnKelolaSampahDashboardPetugas.FlatAppearance.BorderSize = 0;
             this.btnKelolaSampahDashboardPetugas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnKelolaSampahDashboardPetugas.Location = new System.Drawing.Point(912, 172);
+            this.btnKelolaSampahDashboardPetugas.Location = new System.Drawing.Point(1026, 215);
             this.btnKelolaSampahDashboardPetugas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnKelolaSampahDashboardPetugas.Name = "btnKelolaSampahDashboardPetugas";
-            this.btnKelolaSampahDashboardPetugas.Size = new System.Drawing.Size(221, 69);
+            this.btnKelolaSampahDashboardPetugas.Size = new System.Drawing.Size(249, 86);
             this.btnKelolaSampahDashboardPetugas.TabIndex = 6;
             this.btnKelolaSampahDashboardPetugas.UseVisualStyleBackColor = false;
             // 
@@ -137,9 +126,9 @@
             this.lbTotalNasabahDashboardPetugas.BackColor = System.Drawing.Color.Transparent;
             this.lbTotalNasabahDashboardPetugas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbTotalNasabahDashboardPetugas.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTotalNasabahDashboardPetugas.Location = new System.Drawing.Point(440, 275);
+            this.lbTotalNasabahDashboardPetugas.Location = new System.Drawing.Point(495, 344);
             this.lbTotalNasabahDashboardPetugas.Name = "lbTotalNasabahDashboardPetugas";
-            this.lbTotalNasabahDashboardPetugas.Size = new System.Drawing.Size(19, 18);
+            this.lbTotalNasabahDashboardPetugas.Size = new System.Drawing.Size(21, 22);
             this.lbTotalNasabahDashboardPetugas.TabIndex = 7;
             this.lbTotalNasabahDashboardPetugas.Text = "0";
             this.lbTotalNasabahDashboardPetugas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -149,9 +138,9 @@
             this.lbTotalJenisSampahDashBoardPetugas.BackColor = System.Drawing.Color.Transparent;
             this.lbTotalJenisSampahDashBoardPetugas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbTotalJenisSampahDashBoardPetugas.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTotalJenisSampahDashBoardPetugas.Location = new System.Drawing.Point(640, 275);
+            this.lbTotalJenisSampahDashBoardPetugas.Location = new System.Drawing.Point(720, 344);
             this.lbTotalJenisSampahDashBoardPetugas.Name = "lbTotalJenisSampahDashBoardPetugas";
-            this.lbTotalJenisSampahDashBoardPetugas.Size = new System.Drawing.Size(19, 18);
+            this.lbTotalJenisSampahDashBoardPetugas.Size = new System.Drawing.Size(21, 22);
             this.lbTotalJenisSampahDashBoardPetugas.TabIndex = 8;
             this.lbTotalJenisSampahDashBoardPetugas.Text = "0";
             this.lbTotalJenisSampahDashBoardPetugas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -161,9 +150,9 @@
             this.lbTotalTransaksiDashboardPetugas.BackColor = System.Drawing.Color.Transparent;
             this.lbTotalTransaksiDashboardPetugas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbTotalTransaksiDashboardPetugas.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTotalTransaksiDashboardPetugas.Location = new System.Drawing.Point(832, 275);
+            this.lbTotalTransaksiDashboardPetugas.Location = new System.Drawing.Point(936, 344);
             this.lbTotalTransaksiDashboardPetugas.Name = "lbTotalTransaksiDashboardPetugas";
-            this.lbTotalTransaksiDashboardPetugas.Size = new System.Drawing.Size(19, 18);
+            this.lbTotalTransaksiDashboardPetugas.Size = new System.Drawing.Size(21, 22);
             this.lbTotalTransaksiDashboardPetugas.TabIndex = 9;
             this.lbTotalTransaksiDashboardPetugas.Text = "0";
             this.lbTotalTransaksiDashboardPetugas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -173,9 +162,9 @@
             this.lbTotalSampahDashboardPetugas.BackColor = System.Drawing.Color.Transparent;
             this.lbTotalSampahDashboardPetugas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbTotalSampahDashboardPetugas.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTotalSampahDashboardPetugas.Location = new System.Drawing.Point(1016, 274);
+            this.lbTotalSampahDashboardPetugas.Location = new System.Drawing.Point(1143, 342);
             this.lbTotalSampahDashboardPetugas.Name = "lbTotalSampahDashboardPetugas";
-            this.lbTotalSampahDashboardPetugas.Size = new System.Drawing.Size(36, 18);
+            this.lbTotalSampahDashboardPetugas.Size = new System.Drawing.Size(40, 22);
             this.lbTotalSampahDashboardPetugas.TabIndex = 10;
             this.lbTotalSampahDashboardPetugas.Text = "0";
             this.lbTotalSampahDashboardPetugas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -184,9 +173,10 @@
             // 
             this.mainPanel.BackColor = System.Drawing.Color.Transparent;
             this.mainPanel.Controls.Add(this.dgvRiwayatDashboardPetugas);
-            this.mainPanel.Location = new System.Drawing.Point(414, 344);
+            this.mainPanel.Location = new System.Drawing.Point(466, 430);
+            this.mainPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(705, 194);
+            this.mainPanel.Size = new System.Drawing.Size(793, 242);
             this.mainPanel.TabIndex = 12;
             // 
             // dgvRiwayatDashboardPetugas
@@ -196,20 +186,37 @@
             this.dgvRiwayatDashboardPetugas.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dgvRiwayatDashboardPetugas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRiwayatDashboardPetugas.Location = new System.Drawing.Point(0, 0);
+            this.dgvRiwayatDashboardPetugas.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvRiwayatDashboardPetugas.Name = "dgvRiwayatDashboardPetugas";
             this.dgvRiwayatDashboardPetugas.ReadOnly = true;
             this.dgvRiwayatDashboardPetugas.RowHeadersWidth = 51;
             this.dgvRiwayatDashboardPetugas.RowTemplate.Height = 24;
-            this.dgvRiwayatDashboardPetugas.Size = new System.Drawing.Size(705, 194);
+            this.dgvRiwayatDashboardPetugas.Size = new System.Drawing.Size(793, 242);
             this.dgvRiwayatDashboardPetugas.TabIndex = 13;
+            // 
+            // btnSetorSampah
+            // 
+            this.btnSetorSampah.BackColor = System.Drawing.Color.Transparent;
+            this.btnSetorSampah.FlatAppearance.BorderSize = 0;
+            this.btnSetorSampah.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnSetorSampah.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnSetorSampah.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSetorSampah.Location = new System.Drawing.Point(34, 316);
+            this.btnSetorSampah.Name = "btnSetorSampah";
+            this.btnSetorSampah.Size = new System.Drawing.Size(339, 47);
+            this.btnSetorSampah.TabIndex = 13;
+            this.btnSetorSampah.TabStop = false;
+            this.btnSetorSampah.UseVisualStyleBackColor = false;
+            this.btnSetorSampah.Click += new System.EventHandler(this.btnSetorSampah_Click);
             // 
             // FormDashboardPetugas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::EcoCollect.Properties.Resources.P_A2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1192, 583);
+            this.ClientSize = new System.Drawing.Size(1341, 729);
+            this.Controls.Add(this.btnSetorSampah);
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.lbTotalSampahDashboardPetugas);
             this.Controls.Add(this.lbTotalTransaksiDashboardPetugas);
@@ -220,8 +227,7 @@
             this.Controls.Add(this.btnRiwayatDashboardPetugas);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnRiwayatSetorSampah);
-            this.Controls.Add(this.btnSetorSampah);
-            this.Controls.Add(this.btnKelolaJenisSampah);
+            this.Controls.Add(this.btnFormKelolaJenisSampah);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormDashboardPetugas";
@@ -236,8 +242,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnKelolaJenisSampah;
-        private System.Windows.Forms.Button btnSetorSampah;
+        private System.Windows.Forms.Button btnFormKelolaJenisSampah;
         private System.Windows.Forms.Button btnRiwayatSetorSampah;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button btnRiwayatDashboardPetugas;
@@ -249,5 +254,6 @@
         private System.Windows.Forms.Label lbTotalSampahDashboardPetugas;
         private System.Windows.Forms.Panel mainPanel;
         private System.Windows.Forms.DataGridView dgvRiwayatDashboardPetugas;
+        private System.Windows.Forms.Button btnSetorSampah;
     }
 }

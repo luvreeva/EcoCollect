@@ -79,13 +79,19 @@
   <ItemGroup>
     <Compile Include="Config\DbConnection.cs" />
     <Compile Include="Controllers\AuthController.cs" />
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Controllers\C_DashboardPetugas.cs" />
+    <Compile Include="Controllers\C_KategoriSampah.cs" />
+    <Compile Include="Controllers\C_Nasabah.cs" />
+    <Compile Include="Controllers\C_Setoran.cs" />
     <Compile Include="Helpers\Session.cs" />
+    <Compile Include="Models\M_Dashboard.cs" />
+    <Compile Include="Models\M_HistoriSetoran.cs" />
+    <Compile Include="Models\M_ItemSetoran.cs" />
+    <Compile Include="Models\M_KategoriSampah.cs" />
+    <Compile Include="Models\M_Nasabah.cs" />
+    <Compile Include="Models\M_RiwayatDashboard.cs" />
+    <Compile Include="Models\M_Setoran.cs" />
+    <Compile Include="Models\M_StrukSetoran.cs" />
     <Compile Include="Models\M_User.cs" />
     <Compile Include="NasabahItemControl.cs">
       <SubType>UserControl</SubType>
@@ -95,17 +101,35 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\FormKelolaJenisSampah.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FormKelolaJenisSampah.Designer.cs">
+      <DependentUpon>FormKelolaJenisSampah.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FormLayananPenyetoran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FormLayananPenyetoran.Designer.cs">
+      <DependentUpon>FormLayananPenyetoran.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FormLoginNasabah.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FormLoginNasabah.Designer.cs">
+      <DependentUpon>FormLoginNasabah.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FormStrukSetoran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FormStrukSetoran.Designer.cs">
+      <DependentUpon>FormStrukSetoran.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\ItemSampah.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Views\ItemSampah.Designer.cs">
       <DependentUpon>ItemSampah.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\KelolaJenisSampah.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\KelolaJenisSampah.Designer.cs">
-      <DependentUpon>KelolaJenisSampah.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\FormBeranda.cs">
       <SubType>Form</SubType>
@@ -125,12 +149,6 @@
     <Compile Include="Views\FormDashboardPetugas.Designer.cs">
       <DependentUpon>FormDashboardPetugas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\FormLoginNasabah.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\FormLoginNasabah.Designer.cs">
-      <DependentUpon>FormLoginNasabah.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\FormLoginPetugas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,12 +167,6 @@
     <Compile Include="Views\FormRiwayatSetorSampah.Designer.cs">
       <DependentUpon>FormRiwayatSetorSampah.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\LayananPenyetoran.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\LayananPenyetoran.Designer.cs">
-      <DependentUpon>LayananPenyetoran.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="NasabahItemControl.resx">
       <DependentUpon>NasabahItemControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -168,11 +180,20 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Views\FormKelolaJenisSampah.resx">
+      <DependentUpon>FormKelolaJenisSampah.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormLayananPenyetoran.resx">
+      <DependentUpon>FormLayananPenyetoran.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormLoginNasabah.resx">
+      <DependentUpon>FormLoginNasabah.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormStrukSetoran.resx">
+      <DependentUpon>FormStrukSetoran.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\ItemSampah.resx">
       <DependentUpon>ItemSampah.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\KelolaJenisSampah.resx">
-      <DependentUpon>KelolaJenisSampah.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\FormBeranda.resx">
       <DependentUpon>FormBeranda.cs</DependentUpon>
@@ -183,9 +204,6 @@
     <EmbeddedResource Include="Views\FormDashboardPetugas.resx">
       <DependentUpon>FormDashboardPetugas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\FormLoginNasabah.resx">
-      <DependentUpon>FormLoginNasabah.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Views\FormLoginPetugas.resx">
       <DependentUpon>FormLoginPetugas.cs</DependentUpon>
     </EmbeddedResource>
@@ -194,9 +212,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\FormRiwayatSetorSampah.resx">
       <DependentUpon>FormRiwayatSetorSampah.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\LayananPenyetoran.resx">
-      <DependentUpon>LayananPenyetoran.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -232,6 +247,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\P A %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\P A %2810%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\P A %2811%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nasabah R %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\P A %2812%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\P A %2812%291.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

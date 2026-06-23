@@ -95,8 +95,9 @@ ORDER BY ts.tanggal DESC";
 
         private void btnDashboardPetugas_Click(object sender, EventArgs e)
         {
-            dashboardRef.Show();
-            this.Hide();
+            FormDashboardPetugas dashboard = new FormDashboardPetugas();
+            dashboard.Show();
+            this.Close();
         }
 
         private void tbCariRiwayatSetoran_TextChanged(object sender, EventArgs e)

@@ -16,5 +16,10 @@ namespace EcoCollect.Helpers
 
         public static int IdNasabah { get; set; }
         public static string NamaNasabah { get; set; }
+        public static void ClearPetugas()
+        {
+            IdPetugas = 0;
+            NamaPetugas = null;
+        }
     }
 }
