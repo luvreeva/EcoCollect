@@ -21,6 +21,9 @@ namespace EcoCollect.Views
         public FormRiwayatKeuangan()
         {
             InitializeComponent();
+            this.DoubleBuffered = true;
+
+            
             this.Load += FormRiwayatKeuangan_Load;
         }
 

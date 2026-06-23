@@ -49,7 +49,7 @@ namespace EcoCollect.Controllers
             {
                 conn.Open();
 
-                // 1. Cek dulu apakah username-nya ada di pgAdmin
+            
                 string cekUserQuery = "SELECT password FROM nasabah WHERE username = @user";
                 using (var cmd = new NpgsqlCommand(cekUserQuery, conn))
                 {
@@ -58,18 +58,18 @@ namespace EcoCollect.Controllers
                     {
                         if (!reader.Read())
                         {
-                            return 0; // KODE 0: Username tidak ditemukan/belum terdaftar
+                            return 0; 
                         }
 
-                        // 2. Jika username ada, ambil password asli dari database dan bandingkan
+                        
                         string passwordDiDatabase = reader["password"].ToString();
                         if (passwordDiDatabase == password)
                         {
-                            return 1; // KODE 1: Cocok semua (Login Sukses)
+                            return 1; 
                         }
                         else
                         {
-                            return -1; // KODE -1: Username ada, tapi password-nya salah
+                            return -1; 
                         }
                     }
                 }

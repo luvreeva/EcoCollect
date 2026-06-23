@@ -178,6 +178,7 @@
             this.Controls.Add(this.btnRiwayatKeuangan);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormTarikSaldo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormTarikSaldo";
             this.ResumeLayout(false);
             this.PerformLayout();

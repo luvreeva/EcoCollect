@@ -167,7 +167,8 @@
             this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.lblTanggalDaftar);
             this.Name = "ProfilNasabah";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Profil Nasabah";
             this.Load += new System.EventHandler(this.ProfilNasabah_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

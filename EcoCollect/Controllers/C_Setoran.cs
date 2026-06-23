@@ -3,7 +3,6 @@ using System;
 
 namespace EcoCollect.Controllers
 {
-    // Menggunakan Interface yang sama (Bukti Polymorphism & Reusability)
     public class C_Setoran : ICrud_Controller
     {
         public int IdNasabah { get; set; }
@@ -13,7 +12,6 @@ namespace EcoCollect.Controllers
         public decimal HargaSaatTransaksi { get; set; }
         public decimal Subtotal { get; set; }
 
-        // OVERRIDING: Mengimplementasikan fungsi Tambah khusus untuk Setor Sampah
         public bool Tambah()
         {
             using (NpgsqlConnection conn = EcoCollect.Config.DbConnection.GetConnection())
@@ -23,7 +21,6 @@ namespace EcoCollect.Controllers
                 {
                     try
                     {
-                        // 1. Insert ke tabel induk setoran
                         string insertSetoran = @"
                             INSERT INTO setoran (id_nasabah, id_petugas, tanggal) 
                             VALUES (@idNasabah, @idPetugas, CURRENT_TIMESTAMP) RETURNING id_setor;";
@@ -51,7 +48,7 @@ namespace EcoCollect.Controllers
                             cmdDetail.ExecuteNonQuery();
                         }
 
-                        // 3. Tambah Saldo ke tabel nasabah
+                        
                         string updateSaldo = "UPDATE nasabah SET saldo = saldo + @subtotal WHERE id_nasabah = @idNasabah";
                         using (NpgsqlCommand cmdSaldo = new NpgsqlCommand(updateSaldo, conn))
                         {

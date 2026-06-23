@@ -57,7 +57,7 @@ namespace EcoCollect.Views
             this.btnLogoutNasabah.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnLogoutNasabah.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogoutNasabah.Location = new System.Drawing.Point(19, 428);
-            this.btnLogoutNasabah.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLogoutNasabah.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogoutNasabah.Name = "btnLogoutNasabah";
             this.btnLogoutNasabah.Size = new System.Drawing.Size(229, 25);
             this.btnLogoutNasabah.TabIndex = 0;
@@ -72,7 +72,7 @@ namespace EcoCollect.Views
             this.btnFiturTarikSaldo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnFiturTarikSaldo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFiturTarikSaldo.Location = new System.Drawing.Point(19, 169);
-            this.btnFiturTarikSaldo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnFiturTarikSaldo.Margin = new System.Windows.Forms.Padding(2);
             this.btnFiturTarikSaldo.Name = "btnFiturTarikSaldo";
             this.btnFiturTarikSaldo.Size = new System.Drawing.Size(229, 24);
             this.btnFiturTarikSaldo.TabIndex = 2;
@@ -84,7 +84,7 @@ namespace EcoCollect.Views
             this.button4.BackColor = System.Drawing.Color.Transparent;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Location = new System.Drawing.Point(63, 251);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(185, 24);
             this.button4.TabIndex = 4;
@@ -98,7 +98,7 @@ namespace EcoCollect.Views
             this.panelRiwayatPenyetoranDashboard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelRiwayatPenyetoranDashboard.Controls.Add(this.dgvRiwayatPenyetoranDashboard);
             this.panelRiwayatPenyetoranDashboard.Location = new System.Drawing.Point(303, 244);
-            this.panelRiwayatPenyetoranDashboard.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelRiwayatPenyetoranDashboard.Margin = new System.Windows.Forms.Padding(2);
             this.panelRiwayatPenyetoranDashboard.Name = "panelRiwayatPenyetoranDashboard";
             this.panelRiwayatPenyetoranDashboard.Size = new System.Drawing.Size(269, 179);
             this.panelRiwayatPenyetoranDashboard.TabIndex = 5;
@@ -115,7 +115,7 @@ namespace EcoCollect.Views
             this.dgvRiwayatPenyetoranDashboard.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRiwayatPenyetoranDashboard.GridColor = System.Drawing.Color.Black;
             this.dgvRiwayatPenyetoranDashboard.Location = new System.Drawing.Point(2, 1);
-            this.dgvRiwayatPenyetoranDashboard.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvRiwayatPenyetoranDashboard.Margin = new System.Windows.Forms.Padding(2);
             this.dgvRiwayatPenyetoranDashboard.Name = "dgvRiwayatPenyetoranDashboard";
             this.dgvRiwayatPenyetoranDashboard.ReadOnly = true;
             this.dgvRiwayatPenyetoranDashboard.RowHeadersWidth = 62;
@@ -132,7 +132,7 @@ namespace EcoCollect.Views
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.dgvRiwayatPenarikan);
             this.panel1.Location = new System.Drawing.Point(597, 242);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(265, 176);
             this.panel1.TabIndex = 6;
@@ -148,7 +148,7 @@ namespace EcoCollect.Views
             this.dgvRiwayatPenarikan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRiwayatPenarikan.GridColor = System.Drawing.Color.Black;
             this.dgvRiwayatPenarikan.Location = new System.Drawing.Point(1, 1);
-            this.dgvRiwayatPenarikan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvRiwayatPenarikan.Margin = new System.Windows.Forms.Padding(2);
             this.dgvRiwayatPenarikan.Name = "dgvRiwayatPenarikan";
             this.dgvRiwayatPenarikan.ReadOnly = true;
             this.dgvRiwayatPenarikan.RowHeadersWidth = 62;
@@ -201,7 +201,7 @@ namespace EcoCollect.Views
             this.btnRiwayatKeuangan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnRiwayatKeuangan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRiwayatKeuangan.Location = new System.Drawing.Point(19, 213);
-            this.btnRiwayatKeuangan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRiwayatKeuangan.Margin = new System.Windows.Forms.Padding(2);
             this.btnRiwayatKeuangan.Name = "btnRiwayatKeuangan";
             this.btnRiwayatKeuangan.Size = new System.Drawing.Size(231, 20);
             this.btnRiwayatKeuangan.TabIndex = 10;
@@ -239,8 +239,9 @@ namespace EcoCollect.Views
             this.Controls.Add(this.button4);
             this.Controls.Add(this.btnFiturTarikSaldo);
             this.Controls.Add(this.btnLogoutNasabah);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormDashboardNasabah";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormDashboardNasabah";
             this.Load += new System.EventHandler(this.FormDashboardNasabah_Load);
             this.panelRiwayatPenyetoranDashboard.ResumeLayout(false);

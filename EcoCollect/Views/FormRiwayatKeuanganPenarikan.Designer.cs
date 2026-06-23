@@ -47,7 +47,7 @@
             this.pnlPenarikanSaldo.BackColor = System.Drawing.Color.Transparent;
             this.pnlPenarikanSaldo.Controls.Add(this.dgvPenarikanSaldo);
             this.pnlPenarikanSaldo.Location = new System.Drawing.Point(306, 187);
-            this.pnlPenarikanSaldo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlPenarikanSaldo.Margin = new System.Windows.Forms.Padding(2);
             this.pnlPenarikanSaldo.Name = "pnlPenarikanSaldo";
             this.pnlPenarikanSaldo.Size = new System.Drawing.Size(545, 230);
             this.pnlPenarikanSaldo.TabIndex = 0;
@@ -60,7 +60,7 @@
             this.dgvPenarikanSaldo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPenarikanSaldo.GridColor = System.Drawing.Color.Black;
             this.dgvPenarikanSaldo.Location = new System.Drawing.Point(3, 3);
-            this.dgvPenarikanSaldo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvPenarikanSaldo.Margin = new System.Windows.Forms.Padding(2);
             this.dgvPenarikanSaldo.Name = "dgvPenarikanSaldo";
             this.dgvPenarikanSaldo.ReadOnly = true;
             this.dgvPenarikanSaldo.RowHeadersWidth = 62;
@@ -115,7 +115,7 @@
             this.btnPenyetoranSampah.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnPenyetoranSampah.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPenyetoranSampah.Location = new System.Drawing.Point(547, 161);
-            this.btnPenyetoranSampah.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPenyetoranSampah.Margin = new System.Windows.Forms.Padding(2);
             this.btnPenyetoranSampah.Name = "btnPenyetoranSampah";
             this.btnPenyetoranSampah.Size = new System.Drawing.Size(145, 15);
             this.btnPenyetoranSampah.TabIndex = 4;
@@ -130,7 +130,7 @@
             this.lblDashboardNasabah.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.lblDashboardNasabah.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblDashboardNasabah.Location = new System.Drawing.Point(61, 127);
-            this.lblDashboardNasabah.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lblDashboardNasabah.Margin = new System.Windows.Forms.Padding(2);
             this.lblDashboardNasabah.Name = "lblDashboardNasabah";
             this.lblDashboardNasabah.Size = new System.Drawing.Size(186, 25);
             this.lblDashboardNasabah.TabIndex = 5;
@@ -145,7 +145,7 @@
             this.btnTarikSaldo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnTarikSaldo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTarikSaldo.Location = new System.Drawing.Point(64, 168);
-            this.btnTarikSaldo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTarikSaldo.Margin = new System.Windows.Forms.Padding(2);
             this.btnTarikSaldo.Name = "btnTarikSaldo";
             this.btnTarikSaldo.Size = new System.Drawing.Size(177, 28);
             this.btnTarikSaldo.TabIndex = 6;
@@ -160,7 +160,7 @@
             this.btnLogout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Location = new System.Drawing.Point(76, 431);
-            this.btnLogout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(157, 19);
             this.btnLogout.TabIndex = 7;
@@ -197,8 +197,9 @@
             this.Controls.Add(this.lblHasilPenyetoran);
             this.Controls.Add(this.lblSaldoAnda);
             this.Controls.Add(this.pnlPenarikanSaldo);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormRiwayatKeuanganPenarikan";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RiwayatKeuanganPenarikan";
             this.pnlPenarikanSaldo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPenarikanSaldo)).EndInit();

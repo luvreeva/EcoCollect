@@ -116,6 +116,7 @@
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
             this.Name = "FormLoginPetugas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormLoginPetugas";
             this.Load += new System.EventHandler(this.FormLoginPetugas_Load);
             this.ResumeLayout(false);

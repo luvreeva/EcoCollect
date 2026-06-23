@@ -84,10 +84,10 @@
     <Compile Include="Controllers\C_Setoran.cs" />
     <Compile Include="Controllers\ICrud_Controller.cs" />
     <Compile Include="Models\UserSession.cs" />
-    <Compile Include="ProfilNasabah.cs">
+    <Compile Include="Views\ProfilNasabah.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ProfilNasabah.Designer.cs">
+    <Compile Include="Views\ProfilNasabah.Designer.cs">
       <DependentUpon>ProfilNasabah.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\M_User.cs" />
@@ -141,7 +141,7 @@
     <Compile Include="Views\FormRiwayatKeuanganPenarikan.Designer.cs">
       <DependentUpon>FormRiwayatKeuanganPenarikan.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ProfilNasabah.resx">
+    <EmbeddedResource Include="Views\ProfilNasabah.resx">
       <DependentUpon>ProfilNasabah.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

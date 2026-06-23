@@ -154,6 +154,7 @@
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.txtNamaLengkap);
             this.Name = "FormRegristrasiNasabah";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormRegristrasiNasabah";
             this.Load += new System.EventHandler(this.FormRegristrasiNasabah_Load);
             this.ResumeLayout(false);

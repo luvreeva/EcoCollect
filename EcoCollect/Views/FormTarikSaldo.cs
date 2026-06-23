@@ -2,11 +2,12 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
+using System.Data; 
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -20,6 +21,8 @@ namespace EcoCollect.Views
         public FormTarikSaldo()
         {
             InitializeComponent();
+            this.DoubleBuffered = true;
+
             this.Load += FormTarikSaldo_Load;
         }
 

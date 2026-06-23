@@ -6,7 +6,6 @@ namespace EcoCollect.Controllers
 {
     public class C_NasabahDashboard
     {
-        // 1. DATA RINGKASAN SALDO & ANGKA
         public decimal GetSaldo(string username)
         {
             using (var conn = EcoCollect.Config.DbConnection.GetConnection())
@@ -56,8 +55,6 @@ namespace EcoCollect.Controllers
                 }
             }
         }
-
-        // 2. DATA TABEL (DATA GRID VIEW)
         public DataTable GetRiwayatPenyetoran(string username, int? limit = null)
         {
             using (var conn = EcoCollect.Config.DbConnection.GetConnection())
@@ -116,7 +113,6 @@ namespace EcoCollect.Controllers
             }
         }
 
-        // 3. FITUR PROFIL (READ & UPDATE)
         public DataTable GetProfilNasabah(string username)
         {
             using (var conn = EcoCollect.Config.DbConnection.GetConnection())

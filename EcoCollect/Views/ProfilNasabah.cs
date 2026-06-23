@@ -1,14 +1,16 @@
-﻿using EcoCollect.Controllers;
+﻿using EcoCollect;
 using EcoCollect.Config;
-using EcoCollect;
+using EcoCollect.Controllers;
 using Npgsql;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -22,6 +24,9 @@ namespace EcoCollect
         public ProfilNasabah()
         {
             InitializeComponent();
+            this.DoubleBuffered = true;
+
+            
         }
 
         private void ProfilNasabah_Load(object sender, EventArgs e)

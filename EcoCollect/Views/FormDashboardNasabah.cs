@@ -24,6 +24,8 @@ namespace EcoCollect.Views
         public FormDashboardNasabah()
         {
             InitializeComponent();
+            this.DoubleBuffered = true;
+
             Thread.CurrentThread.CurrentUICulture = new CultureInfo("id-ID");
         }
 

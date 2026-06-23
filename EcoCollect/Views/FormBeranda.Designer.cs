@@ -71,6 +71,7 @@
             this.Controls.Add(this.btnAksesN);
             this.Controls.Add(this.btnAkses);
             this.Name = "FormBeranda";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormBeranda";
             this.Load += new System.EventHandler(this.FormBeranda_Load);
             this.ResumeLayout(false);

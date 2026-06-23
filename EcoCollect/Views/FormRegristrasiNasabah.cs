@@ -1,13 +1,15 @@
-﻿using System;
+﻿using EcoCollect.Controllers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using EcoCollect.Controllers;
 namespace EcoCollect.Views
 {
     public partial class FormRegristrasiNasabah : Form
@@ -15,6 +17,9 @@ namespace EcoCollect.Views
         public FormRegristrasiNasabah()
         {
             InitializeComponent();
+            this.DoubleBuffered = true;
+
+         
         }
 
         private void txtUsername_TextChanged(object sender, EventArgs e)
