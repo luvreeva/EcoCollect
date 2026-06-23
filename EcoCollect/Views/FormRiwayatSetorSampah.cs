@@ -104,6 +104,19 @@ ORDER BY ts.tanggal DESC";
         {
             LoadRiwayatSetorPetugas(tbCariRiwayatSetoran.Text);
         }
-        
+
+        private void btnFormLayananPenyetoran_Click(object sender, EventArgs e)
+        {
+            FormBuatSetoran form = new FormBuatSetoran();
+            form.Show();
+            this.Close();
+        }
+
+        private void btnFormKelolaJenisSampahPetugas_Click(object sender, EventArgs e)
+        {
+            FormKelolaJenisSampah form = new FormKelolaJenisSampah();
+            form.Show();
+            this.Close();
+        }
     }
 }

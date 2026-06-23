@@ -14,5 +14,6 @@ namespace EcoCollect.Models
         public string FotoThumbnail { get; set; }
         public string Deskripsi { get; set; }
         public bool IsAktif { get; set; }
+
     }
 }

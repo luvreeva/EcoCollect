@@ -49,6 +49,8 @@
             // 
             this.btnFormKelolaJenisSampah.BackColor = System.Drawing.Color.Transparent;
             this.btnFormKelolaJenisSampah.FlatAppearance.BorderSize = 0;
+            this.btnFormKelolaJenisSampah.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnFormKelolaJenisSampah.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnFormKelolaJenisSampah.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFormKelolaJenisSampah.Location = new System.Drawing.Point(36, 255);
             this.btnFormKelolaJenisSampah.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -62,6 +64,8 @@
             // 
             this.btnRiwayatSetorSampah.BackColor = System.Drawing.Color.Transparent;
             this.btnRiwayatSetorSampah.FlatAppearance.BorderSize = 0;
+            this.btnRiwayatSetorSampah.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnRiwayatSetorSampah.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnRiwayatSetorSampah.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRiwayatSetorSampah.Location = new System.Drawing.Point(36, 380);
             this.btnRiwayatSetorSampah.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -75,6 +79,8 @@
             // 
             this.btnLogout.BackColor = System.Drawing.Color.Transparent;
             this.btnLogout.FlatAppearance.BorderSize = 0;
+            this.btnLogout.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnLogout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Location = new System.Drawing.Point(35, 654);
             this.btnLogout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -88,6 +94,8 @@
             // 
             this.btnRiwayatDashboardPetugas.BackColor = System.Drawing.Color.Transparent;
             this.btnRiwayatDashboardPetugas.FlatAppearance.BorderSize = 0;
+            this.btnRiwayatDashboardPetugas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnRiwayatDashboardPetugas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnRiwayatDashboardPetugas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRiwayatDashboardPetugas.Location = new System.Drawing.Point(450, 215);
             this.btnRiwayatDashboardPetugas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -101,6 +109,8 @@
             // 
             this.btnSetorDashboardPetugas.BackColor = System.Drawing.Color.Transparent;
             this.btnSetorDashboardPetugas.FlatAppearance.BorderSize = 0;
+            this.btnSetorDashboardPetugas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnSetorDashboardPetugas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnSetorDashboardPetugas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSetorDashboardPetugas.Location = new System.Drawing.Point(735, 215);
             this.btnSetorDashboardPetugas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -108,11 +118,14 @@
             this.btnSetorDashboardPetugas.Size = new System.Drawing.Size(255, 86);
             this.btnSetorDashboardPetugas.TabIndex = 5;
             this.btnSetorDashboardPetugas.UseVisualStyleBackColor = false;
+            this.btnSetorDashboardPetugas.Click += new System.EventHandler(this.btnSetorDashboardPetugas_Click);
             // 
             // btnKelolaSampahDashboardPetugas
             // 
             this.btnKelolaSampahDashboardPetugas.BackColor = System.Drawing.Color.Transparent;
             this.btnKelolaSampahDashboardPetugas.FlatAppearance.BorderSize = 0;
+            this.btnKelolaSampahDashboardPetugas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnKelolaSampahDashboardPetugas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnKelolaSampahDashboardPetugas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKelolaSampahDashboardPetugas.Location = new System.Drawing.Point(1026, 215);
             this.btnKelolaSampahDashboardPetugas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -120,6 +133,7 @@
             this.btnKelolaSampahDashboardPetugas.Size = new System.Drawing.Size(249, 86);
             this.btnKelolaSampahDashboardPetugas.TabIndex = 6;
             this.btnKelolaSampahDashboardPetugas.UseVisualStyleBackColor = false;
+            this.btnKelolaSampahDashboardPetugas.Click += new System.EventHandler(this.btnKelolaSampahDashboardPetugas_Click);
             // 
             // lbTotalNasabahDashboardPetugas
             // 

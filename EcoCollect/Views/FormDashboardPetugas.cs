@@ -120,5 +120,23 @@ namespace EcoCollect.Views
 
             this.Hide();
         }
+
+        private void btnSetorDashboardPetugas_Click(object sender, EventArgs e)
+        {
+            FormBuatSetoran form = new FormBuatSetoran();
+            form.StartPosition =FormStartPosition.CenterScreen;
+            form.Show();
+
+            this.Hide();
+        }
+
+        private void btnKelolaSampahDashboardPetugas_Click(object sender, EventArgs e)
+        {
+            FormKelolaJenisSampah form = new FormKelolaJenisSampah();
+            form.StartPosition = FormStartPosition.CenterScreen;
+            form.Show();
+
+            this.Hide();
+        }
     }
 }

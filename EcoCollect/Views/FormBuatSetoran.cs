@@ -1,10 +1,11 @@
-﻿using System;
+﻿using EcoCollect.Controllers;
+using EcoCollect.Helpers;
+using EcoCollect.Models;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
-using EcoCollect.Controllers;
-using EcoCollect.Models;
 
 namespace EcoCollect.Views
 {
@@ -232,6 +233,34 @@ namespace EcoCollect.Views
             FormKelolaJenisSampah form = new FormKelolaJenisSampah();
             form.Show();
             this.Hide();
+        }
+
+        private void btnRiwayatSetorSampah_Click(object sender, EventArgs e)
+        {
+            FormRiwayatSetorSampah form = new FormRiwayatSetorSampah();
+            form.Show();
+            this.Hide();
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+                "Yakin ingin logout?",
+                "Konfirmasi",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
+
+            if (result == DialogResult.Yes)
+            {
+                Session.IdPetugas = 0;
+                Session.NamaPetugas = "";
+
+                FormLoginPetugas login = new FormLoginPetugas();
+                login.Show();
+
+                this.Close();
+            }
         }
     }
 }

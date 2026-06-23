@@ -68,6 +68,7 @@
             this.btnLayananPenyetoran.Size = new System.Drawing.Size(323, 48);
             this.btnLayananPenyetoran.TabIndex = 1;
             this.btnLayananPenyetoran.UseVisualStyleBackColor = false;
+            this.btnLayananPenyetoran.Click += new System.EventHandler(this.btnLayananPenyetoran_Click);
             // 
             // btnRiwayatSetorSampah
             // 
@@ -81,6 +82,7 @@
             this.btnRiwayatSetorSampah.Size = new System.Drawing.Size(318, 54);
             this.btnRiwayatSetorSampah.TabIndex = 2;
             this.btnRiwayatSetorSampah.UseVisualStyleBackColor = false;
+            this.btnRiwayatSetorSampah.Click += new System.EventHandler(this.btnRiwayatSetorSampah_Click);
             // 
             // btnLogOut
             // 

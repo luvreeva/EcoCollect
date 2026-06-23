@@ -158,6 +158,7 @@
             this.btnRiwayatSetorSampah.TabIndex = 8;
             this.btnRiwayatSetorSampah.TabStop = false;
             this.btnRiwayatSetorSampah.UseVisualStyleBackColor = false;
+            this.btnRiwayatSetorSampah.Click += new System.EventHandler(this.btnRiwayatSetorSampah_Click);
             // 
             // txtCariNasabah
             // 
