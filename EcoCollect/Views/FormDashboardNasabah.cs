@@ -190,5 +190,7 @@ namespace EcoCollect.Views
                 MessageBox.Show("Gagal membuka halaman profil: " + ex.Message, "Error Navigasi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        
     }
 }

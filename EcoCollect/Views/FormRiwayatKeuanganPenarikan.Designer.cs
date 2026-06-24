@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRiwayatKeuanganPenarikan));
             this.pnlPenarikanSaldo = new System.Windows.Forms.Panel();
             this.dgvPenarikanSaldo = new System.Windows.Forms.DataGridView();
             this.lblSaldoAnda = new System.Windows.Forms.Label();
@@ -185,7 +186,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::EcoCollect.Properties.Resources.P_A__6_;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(894, 474);
             this.Controls.Add(this.btnProfil);

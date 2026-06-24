@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRiwayatKeuangan));
             this.btnDashboardNasabah = new System.Windows.Forms.Button();
             this.btnTarikSaldo = new System.Windows.Forms.Button();
             this.btnPengaturanProfil = new System.Windows.Forms.Button();
@@ -52,7 +53,7 @@
             this.btnDashboardNasabah.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnDashboardNasabah.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDashboardNasabah.Location = new System.Drawing.Point(60, 127);
-            this.btnDashboardNasabah.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDashboardNasabah.Margin = new System.Windows.Forms.Padding(2);
             this.btnDashboardNasabah.Name = "btnDashboardNasabah";
             this.btnDashboardNasabah.Size = new System.Drawing.Size(188, 24);
             this.btnDashboardNasabah.TabIndex = 2;
@@ -68,7 +69,7 @@
             this.btnTarikSaldo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnTarikSaldo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTarikSaldo.Location = new System.Drawing.Point(60, 170);
-            this.btnTarikSaldo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTarikSaldo.Margin = new System.Windows.Forms.Padding(2);
             this.btnTarikSaldo.Name = "btnTarikSaldo";
             this.btnTarikSaldo.Size = new System.Drawing.Size(185, 23);
             this.btnTarikSaldo.TabIndex = 3;
@@ -83,7 +84,7 @@
             this.btnPengaturanProfil.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnPengaturanProfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPengaturanProfil.Location = new System.Drawing.Point(63, 250);
-            this.btnPengaturanProfil.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPengaturanProfil.Margin = new System.Windows.Forms.Padding(2);
             this.btnPengaturanProfil.Name = "btnPengaturanProfil";
             this.btnPengaturanProfil.Size = new System.Drawing.Size(184, 24);
             this.btnPengaturanProfil.TabIndex = 4;
@@ -98,7 +99,7 @@
             this.btnLogoutNasabah.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnLogoutNasabah.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogoutNasabah.Location = new System.Drawing.Point(26, 428);
-            this.btnLogoutNasabah.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLogoutNasabah.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogoutNasabah.Name = "btnLogoutNasabah";
             this.btnLogoutNasabah.Size = new System.Drawing.Size(211, 24);
             this.btnLogoutNasabah.TabIndex = 5;
@@ -111,7 +112,7 @@
             this.pnlPenyetoranSampah.BackColor = System.Drawing.Color.Transparent;
             this.pnlPenyetoranSampah.Controls.Add(this.dgvPenyetoranSampah);
             this.pnlPenyetoranSampah.Location = new System.Drawing.Point(303, 185);
-            this.pnlPenyetoranSampah.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlPenyetoranSampah.Margin = new System.Windows.Forms.Padding(2);
             this.pnlPenyetoranSampah.Name = "pnlPenyetoranSampah";
             this.pnlPenyetoranSampah.Size = new System.Drawing.Size(538, 224);
             this.pnlPenyetoranSampah.TabIndex = 6;
@@ -126,7 +127,7 @@
             this.dgvPenyetoranSampah.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvPenyetoranSampah.GridColor = System.Drawing.Color.Black;
             this.dgvPenyetoranSampah.Location = new System.Drawing.Point(0, 0);
-            this.dgvPenyetoranSampah.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvPenyetoranSampah.Margin = new System.Windows.Forms.Padding(2);
             this.dgvPenyetoranSampah.Name = "dgvPenyetoranSampah";
             this.dgvPenyetoranSampah.ReadOnly = true;
             this.dgvPenyetoranSampah.RowHeadersVisible = false;
@@ -181,7 +182,7 @@
             this.btnPenarikanSaldo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnPenarikanSaldo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPenarikanSaldo.Location = new System.Drawing.Point(717, 162);
-            this.btnPenarikanSaldo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPenarikanSaldo.Margin = new System.Windows.Forms.Padding(2);
             this.btnPenarikanSaldo.Name = "btnPenarikanSaldo";
             this.btnPenarikanSaldo.Size = new System.Drawing.Size(117, 15);
             this.btnPenarikanSaldo.TabIndex = 9;
@@ -206,7 +207,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::EcoCollect.Properties.Resources.P_A__5_;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(894, 474);
             this.Controls.Add(this.btnProfil);
@@ -219,7 +220,7 @@
             this.Controls.Add(this.btnPengaturanProfil);
             this.Controls.Add(this.btnTarikSaldo);
             this.Controls.Add(this.btnDashboardNasabah);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormRiwayatKeuangan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormRiwayatKeuangan";

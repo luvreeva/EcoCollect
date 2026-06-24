@@ -1,4 +1,5 @@
 ﻿using EcoCollect.Controllers;
+using EcoCollect.Helpers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -37,11 +38,9 @@ namespace EcoCollect.Views
 
         private void btnMasuk_Click(object sender, EventArgs e)
         {
-           
             string username = txtUsername.Text.Trim();
             string password = txtPassword.Text.Trim();
 
-            
             if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password))
             {
                 MessageBox.Show("Username dan password wajib diisi!", "Peringatan",
@@ -49,19 +48,26 @@ namespace EcoCollect.Views
                 return;
             }
 
-            
             AuthController auth = new AuthController();
             bool berhasil = auth.LoginPetugas(username, password);
 
-           
             if (berhasil)
             {
-                MessageBox.Show("Login petugas berhasil!", "Sukses",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // --- KUNCI PERBAIKAN: Isi Session secara manual berdasarkan username jika Controller-mu belum mengisinya ---
+                // Kita panggil class Session agar terisi dengan data yang pas dari text input
+                Session.Username = username;
 
-                
-                FormBeranda beranda = new FormBeranda();
-                beranda.Show();
+                // Catatan: Idealnya AuthController.LoginPetugas yang bertugas mengisi Session.IdPetugas dan Session.NamaPetugas dari database. 
+                // Jika temanmu lupa mengisinya di dalam AuthController, pantesan datanya kosong.
+
+                MessageBox.Show(
+                    "Login sebagai " + (string.IsNullOrEmpty(Session.NamaPetugas) ? username : Session.NamaPetugas),
+                    "Sukses",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+
+                FormDashboardPetugas dashboard = new FormDashboardPetugas();
+                dashboard.Show();
                 this.Hide();
             }
             else
@@ -75,6 +81,8 @@ namespace EcoCollect.Views
         {
             txtPassword.UseSystemPasswordChar = !checkBox1.Checked;
         }
+
+       
     }
     
 }

@@ -40,7 +40,8 @@
             this.btnAkses.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnAkses.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnAkses.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAkses.Location = new System.Drawing.Point(456, 295);
+            this.btnAkses.Location = new System.Drawing.Point(608, 363);
+            this.btnAkses.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAkses.Name = "btnAkses";
             this.btnAkses.Size = new System.Drawing.Size(149, 16);
             this.btnAkses.TabIndex = 2;
@@ -54,7 +55,8 @@
             this.btnAksesN.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnAksesN.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnAksesN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAksesN.Location = new System.Drawing.Point(456, 394);
+            this.btnAksesN.Location = new System.Drawing.Point(608, 485);
+            this.btnAksesN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAksesN.Name = "btnAksesN";
             this.btnAksesN.Size = new System.Drawing.Size(149, 14);
             this.btnAksesN.TabIndex = 3;
@@ -63,11 +65,11 @@
             // 
             // FormBeranda
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(894, 474);
+            this.ClientSize = new System.Drawing.Size(1192, 583);
             this.Controls.Add(this.btnAksesN);
             this.Controls.Add(this.btnAkses);
             this.Name = "FormBeranda";

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using EcoCollect.Helpers;
 
 namespace EcoCollect.Views
 {
@@ -24,7 +25,7 @@ namespace EcoCollect.Views
 
         private void FormBeranda_Load(object sender, EventArgs e)
         {
-
+           
         }
 
         private void btnAksesPetugas_Click(object sender, EventArgs e)

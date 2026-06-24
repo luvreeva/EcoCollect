@@ -31,6 +31,7 @@ namespace EcoCollect.Views
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDashboardNasabah));
             this.btnLogoutNasabah = new System.Windows.Forms.Button();
             this.btnFiturTarikSaldo = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -114,7 +115,7 @@ namespace EcoCollect.Views
             this.dgvRiwayatPenyetoranDashboard.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvRiwayatPenyetoranDashboard.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRiwayatPenyetoranDashboard.GridColor = System.Drawing.Color.Black;
-            this.dgvRiwayatPenyetoranDashboard.Location = new System.Drawing.Point(2, 1);
+            this.dgvRiwayatPenyetoranDashboard.Location = new System.Drawing.Point(0, 1);
             this.dgvRiwayatPenyetoranDashboard.Margin = new System.Windows.Forms.Padding(2);
             this.dgvRiwayatPenyetoranDashboard.Name = "dgvRiwayatPenyetoranDashboard";
             this.dgvRiwayatPenyetoranDashboard.ReadOnly = true;
@@ -226,7 +227,7 @@ namespace EcoCollect.Views
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::EcoCollect.Properties.Resources.P_A__1_;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(894, 474);
             this.Controls.Add(this.btnProfil);

@@ -1,18 +1,19 @@
 ﻿using System;
 using Npgsql;
 using EcoCollect.Config;
+using EcoCollect.Helpers;
 
 namespace EcoCollect.Controllers
 {
     public class AuthController
     {
         private string connString = "Host=localhost;Port=5432;Username=postgres;Password=Reeva97;Database=\"ECO-COLLECT1\"";
+
         public bool RegisterNasabah(string nama, string username, string password, string noHp)
         {
             using (var conn = DbConnection.GetConnection())
             {
                 conn.Open();
-
 
                 string cekQuery = "SELECT COUNT(1) FROM nasabah WHERE username = @user";
                 using (var cmdCek = new NpgsqlCommand(cekQuery, conn))
@@ -21,13 +22,12 @@ namespace EcoCollect.Controllers
                     int usernameTersedia = Convert.ToInt32(cmdCek.ExecuteScalar());
 
                     if (usernameTersedia > 0)
-                    {
-                        throw new Exception("Username sudah digunakan! Pilihlah username lain.");
-                    }
+                        throw new Exception("Username sudah digunakan!");
                 }
 
-                string insertQuery = @"INSERT INTO nasabah (nama_lengkap, username, password, no_hp, saldo) 
-                                      VALUES (@nama, @user, @pass, @hp,0)";
+                string insertQuery = @"
+            INSERT INTO nasabah (nama_lengkap, username, password, no_hp, saldo) 
+            VALUES (@nama, @user, @pass, @hp, 0)";
 
                 using (var cmdInsert = new NpgsqlCommand(insertQuery, conn))
                 {
@@ -35,13 +35,11 @@ namespace EcoCollect.Controllers
                     cmdInsert.Parameters.AddWithValue("@user", username);
                     cmdInsert.Parameters.AddWithValue("@pass", password);
                     cmdInsert.Parameters.AddWithValue("@hp", noHp);
-              
-                    int barisTersimpan = cmdInsert.ExecuteNonQuery();
-                    return barisTersimpan > 0;
+
+                    return cmdInsert.ExecuteNonQuery() > 0;
                 }
             }
         }
-
 
         public int LoginNasabah(string username, string password)
         {
@@ -49,8 +47,8 @@ namespace EcoCollect.Controllers
             {
                 conn.Open();
 
-            
-                string cekUserQuery = "SELECT password FROM nasabah WHERE username = @user";
+                // Mengambil id, nama, dan password untuk validasi sekaligus set Session
+                string cekUserQuery = "SELECT id_nasabah, nama_lengkap, username, password FROM nasabah WHERE username = @user";
                 using (var cmd = new NpgsqlCommand(cekUserQuery, conn))
                 {
                     cmd.Parameters.AddWithValue("@user", username);
@@ -58,18 +56,22 @@ namespace EcoCollect.Controllers
                     {
                         if (!reader.Read())
                         {
-                            return 0; 
+                            return 0; // Username tidak ditemukan
                         }
 
-                        
                         string passwordDiDatabase = reader["password"].ToString();
                         if (passwordDiDatabase == password)
                         {
-                            return 1; 
+                            // Menyimpan data ke Session agar bisa digunakan di form lain
+                            Session.IdNasabah = Convert.ToInt32(reader["id_nasabah"]);
+                            Session.NamaNasabah = reader["nama_lengkap"].ToString();
+                            Session.Username = reader["username"].ToString();
+
+                            return 1; // Login sukses
                         }
                         else
                         {
-                            return -1; 
+                            return -1; // Password salah
                         }
                     }
                 }
@@ -81,16 +83,31 @@ namespace EcoCollect.Controllers
             using (var conn = DbConnection.GetConnection())
             {
                 conn.Open();
-                
-                string query = "SELECT COUNT(1) FROM petugas WHERE username = @user AND password = @pass";
+
+                string query = @"
+        SELECT id_petugas, username
+        FROM petugas
+        WHERE username = @user
+        AND password = @pass";
 
                 using (var cmd = new NpgsqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@user", username);
                     cmd.Parameters.AddWithValue("@pass", password);
 
-                    int jumlahCocok = Convert.ToInt32(cmd.ExecuteScalar());
-                    return jumlahCocok > 0; 
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            Session.IdPetugas = Convert.ToInt32(reader["id_petugas"]);
+                            
+                            Session.Username = reader["username"].ToString();
+
+                            return true;
+                        }
+
+                        return false;
+                    }
                 }
             }
         }
@@ -100,7 +117,7 @@ namespace EcoCollect.Controllers
             using (var conn = DbConnection.GetConnection())
             {
                 conn.Open();
-                
+
                 string query = @"UPDATE nasabah 
                          SET nama_lengkap = @nama, no_hp = @hp 
                          WHERE username = @user";
@@ -112,11 +129,9 @@ namespace EcoCollect.Controllers
                     cmd.Parameters.AddWithValue("@user", username);
 
                     int barisTerupdate = cmd.ExecuteNonQuery();
-                    return barisTerupdate > 0; 
+                    return barisTerupdate > 0;
                 }
             }
         }
     }
 }
-
-         
