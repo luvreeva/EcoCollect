@@ -82,7 +82,12 @@ namespace EcoCollect.Views
             txtPassword.UseSystemPasswordChar = !checkBox1.Checked;
         }
 
-       
+        private void btnPetugasKeBeranda_Click(object sender, EventArgs e)
+        {
+            EcoCollect.Views.FormBeranda beranda = new EcoCollect.Views.FormBeranda();
+            beranda.Show();
+            this.Close();
+        }
     }
     
 }

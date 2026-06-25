@@ -214,7 +214,6 @@ namespace EcoCollect.Views
                 {
                     IdNasabah = idNasabah,
 
-                    // --- SUDAH DIPERBAIKI: Mengikuti siapa yang sedang login ---
                     IdPetugas = Session.IdPetugas,
 
                     KodeTransaksi = kodeTransaksi,

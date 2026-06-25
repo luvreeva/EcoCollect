@@ -3,10 +3,8 @@ using EcoCollect.Helpers;
 using EcoCollect.Models;
 using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Globalization;
 using System.Windows.Forms;
-using System.IO;
 
 namespace EcoCollect.Views
 {
@@ -27,6 +25,7 @@ namespace EcoCollect.Views
             flpKategoriSampah.AutoScroll = true;
             flpKategoriSampah.FlowDirection = FlowDirection.TopDown;
             flpKategoriSampah.WrapContents = false;
+            flpKategoriSampah.Padding = new Padding(0);
 
             ResetForm();
             LoadKategori();
@@ -47,7 +46,23 @@ namespace EcoCollect.Views
 
                 foreach (KategoriSampahModel kategori in daftarKategori)
                 {
-                    Panel card = BuatCardKategori(kategori);
+                    CardKategoriControl card = new CardKategoriControl();
+
+                    card.Width = flpKategoriSampah.ClientSize.Width - 25;
+
+                    if (card.Width < 380)
+                        card.Width = 380;
+
+                    card.Margin = new Padding(5, 5, 5, 10);
+
+                    card.SetData(kategori);
+
+                    card.EditClicked -= CardKategori_EditClicked;
+                    card.EditClicked += CardKategori_EditClicked;
+
+                    card.HapusClicked -= CardKategori_HapusClicked;
+                    card.HapusClicked += CardKategori_HapusClicked;
+
                     flpKategoriSampah.Controls.Add(card);
                 }
             }
@@ -57,165 +72,9 @@ namespace EcoCollect.Views
             }
         }
 
-        private Panel BuatCardKategori(KategoriSampahModel kategori)
+        private void CardKategori_EditClicked(KategoriSampahModel kategori)
         {
-            int cardWidth = flpKategoriSampah.ClientSize.Width - 35;
-
-            if (cardWidth < 380)
-                cardWidth = 380;
-
-            Panel card = new Panel();
-            card.Width = cardWidth;
-            card.Height = 95;
-            card.BackColor = Color.FromArgb(220, 245, 247);
-            card.Margin = new Padding(5, 5, 5, 10);
-            card.Tag = kategori;
-
-            int marginLeft = 12;
-            int gambarWidth = 55;
-
-            int buttonWidth = 58;
-            int buttonHeight = 30;
-            int gap = 8;
-
-            int xEdit = card.Width - buttonWidth - 12;
-            int xHapus = xEdit - buttonWidth - gap;
-
-            int hargaWidth = 70;
-            int xHarga = xHapus - hargaWidth - gap;
-
-            int xInfo = marginLeft + gambarWidth + 12;
-            int infoWidth = xHarga - xInfo - 10;
-
-            if (infoWidth < 110)
-                infoWidth = 110;
-
-            PictureBox pic = new PictureBox();
-            pic.Width = gambarWidth;
-            pic.Height = 55;
-            pic.Location = new Point(marginLeft, 20);
-            pic.SizeMode = PictureBoxSizeMode.Zoom;
-            pic.BackColor = Color.Transparent;
-            LoadGambarKategori(pic, kategori.FotoThumbnail);
-
-            Label lblNama = new Label();
-            lblNama.Text = string.IsNullOrWhiteSpace(kategori.NamaJenis) ? "-" : kategori.NamaJenis;
-            lblNama.Font = new Font("Segoe UI", 10, FontStyle.Bold);
-            lblNama.ForeColor = Color.FromArgb(0, 84, 96);
-            lblNama.BackColor = Color.Transparent;
-            lblNama.Location = new Point(xInfo, 20);
-            lblNama.Width = infoWidth;
-            lblNama.Height = 22;
-            lblNama.AutoSize = false;
-            lblNama.TextAlign = ContentAlignment.MiddleLeft;
-
-            Label lblDeskripsi = new Label();
-            lblDeskripsi.Text = string.IsNullOrWhiteSpace(kategori.Deskripsi) ? "-" : kategori.Deskripsi;
-            lblDeskripsi.Font = new Font("Segoe UI", 9, FontStyle.Regular);
-            lblDeskripsi.ForeColor = Color.Gray;
-            lblDeskripsi.BackColor = Color.Transparent;
-            lblDeskripsi.Location = new Point(xInfo, 46);
-            lblDeskripsi.Width = infoWidth;
-            lblDeskripsi.Height = 35;
-            lblDeskripsi.AutoSize = false;
-            lblDeskripsi.TextAlign = ContentAlignment.TopLeft;
-
-            Label lblHarga = new Label();
-            lblHarga.Text = kategori.HargaPerKg.ToString("C0", cultureId) + "\n/ kg";
-            lblHarga.Font = new Font("Segoe UI", 8, FontStyle.Bold);
-            lblHarga.ForeColor = Color.FromArgb(0, 84, 96);
-            lblHarga.BackColor = Color.Transparent;
-            lblHarga.Location = new Point(xHarga, 27);
-            lblHarga.Width = hargaWidth;
-            lblHarga.Height = 42;
-            lblHarga.AutoSize = false;
-            lblHarga.TextAlign = ContentAlignment.MiddleCenter;
-
-            Button btnHapus = new Button();
-            btnHapus.Text = "Hapus";
-            btnHapus.Width = buttonWidth;
-            btnHapus.Height = buttonHeight;
-            btnHapus.Location = new Point(xHapus, 32);
-            btnHapus.Tag = kategori;
-            btnHapus.Cursor = Cursors.Hand;
-            btnHapus.Font = new Font("Segoe UI", 8, FontStyle.Bold);
-            btnHapus.TextAlign = ContentAlignment.MiddleCenter;
-            btnHapus.BackColor = Color.White;
-            btnHapus.ForeColor = Color.FromArgb(0, 84, 96);
-            btnHapus.FlatStyle = FlatStyle.Flat;
-            btnHapus.FlatAppearance.BorderSize = 0;
-            btnHapus.Click += BtnHapus_Click;
-
-            Button btnEdit = new Button();
-            btnEdit.Text = "Edit";
-            btnEdit.Width = buttonWidth;
-            btnEdit.Height = buttonHeight;
-            btnEdit.Location = new Point(xEdit, 32);
-            btnEdit.Tag = kategori;
-            btnEdit.Cursor = Cursors.Hand;
-            btnEdit.Font = new Font("Segoe UI", 8, FontStyle.Bold);
-            btnEdit.TextAlign = ContentAlignment.MiddleCenter;
-            btnEdit.BackColor = Color.White;
-            btnEdit.ForeColor = Color.FromArgb(0, 84, 96);
-            btnEdit.FlatStyle = FlatStyle.Flat;
-            btnEdit.FlatAppearance.BorderSize = 0;
-            btnEdit.Click += BtnEdit_Click;
-
-            card.Controls.Add(pic);
-            card.Controls.Add(lblNama);
-            card.Controls.Add(lblDeskripsi);
-            card.Controls.Add(lblHarga);
-            card.Controls.Add(btnHapus);
-            card.Controls.Add(btnEdit);
-
-            pic.BringToFront();
-            lblNama.BringToFront();
-            lblDeskripsi.BringToFront();
-            lblHarga.BringToFront();
-            btnHapus.BringToFront();
-            btnEdit.BringToFront();
-
-            return card;
-        }
-
-        private void LoadGambarKategori(PictureBox pic, string fotoThumbnail)
-        {
-            try
-            {
-                if (string.IsNullOrWhiteSpace(fotoThumbnail))
-                {
-                    pic.Image = null;
-                    return;
-                }
-
-                if (fotoThumbnail.StartsWith("http://") || fotoThumbnail.StartsWith("https://"))
-                {
-                    pic.LoadAsync(fotoThumbnail);
-                    return;
-                }
-
-                string pathGambar = System.IO.Path.Combine(Application.StartupPath, "Resources", fotoThumbnail);
-
-                if (System.IO.File.Exists(pathGambar))
-                {
-                    pic.Image = Image.FromFile(pathGambar);
-                }
-                else
-                {
-                    pic.Image = null;
-                }
-            }
-            catch
-            {
-                pic.Image = null;
-            }
-        }
-
-        private void BtnEdit_Click(object sender, EventArgs e)
-        {
-            Button btn = sender as Button;
-
-            if (btn == null || !(btn.Tag is KategoriSampahModel kategori))
+            if (kategori == null)
                 return;
 
             idKategoriDipilih = kategori.IdKategori;
@@ -224,15 +83,11 @@ namespace EcoCollect.Views
             txtHargaPerKg.Text = kategori.HargaPerKg.ToString("N0", cultureId);
             txtUrlThumbnail.Text = kategori.FotoThumbnail;
             txtDeskripsi.Text = kategori.Deskripsi;
-
-            btnSimpanJenisSampah.Text = "Update Jenis Sampah";
         }
 
-        private void BtnHapus_Click(object sender, EventArgs e)
+        private void CardKategori_HapusClicked(KategoriSampahModel kategori)
         {
-            Button btn = sender as Button;
-
-            if (btn == null || !(btn.Tag is KategoriSampahModel kategori))
+            if (kategori == null)
                 return;
 
             DialogResult result = MessageBox.Show(
@@ -354,6 +209,7 @@ namespace EcoCollect.Views
             txtHargaPerKg.Clear();
             txtUrlThumbnail.Clear();
             txtDeskripsi.Clear();
+
         }
 
         private void btnDashboard_Click(object sender, EventArgs e)
@@ -372,10 +228,11 @@ namespace EcoCollect.Views
         private void btnLogOut_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show(
-        "Yakin ingin logout?",
-        "Konfirmasi",
-        MessageBoxButtons.YesNo,
-        MessageBoxIcon.Question);
+                "Yakin ingin logout?",
+                "Konfirmasi",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
 
             if (result == DialogResult.Yes)
             {

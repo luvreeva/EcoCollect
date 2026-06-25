@@ -34,6 +34,7 @@
             this.btnMasuk = new System.Windows.Forms.Button();
             this.btnKeBeranda = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.btnPetugasKeBeranda = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtUsername
@@ -41,9 +42,10 @@
             this.txtUsername.BackColor = System.Drawing.Color.White;
             this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUsername.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(264, 181);
+            this.txtUsername.Location = new System.Drawing.Point(396, 278);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(365, 23);
+            this.txtUsername.Size = new System.Drawing.Size(548, 34);
             this.txtUsername.TabIndex = 0;
             this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
             // 
@@ -52,10 +54,9 @@
             this.txtPassword.BackColor = System.Drawing.Color.White;
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPassword.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(264, 249);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPassword.Location = new System.Drawing.Point(396, 383);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(355, 20);
+            this.txtPassword.Size = new System.Drawing.Size(532, 30);
             this.txtPassword.TabIndex = 1;
             this.txtPassword.UseSystemPasswordChar = true;
             // 
@@ -66,9 +67,10 @@
             this.btnMasuk.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnMasuk.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnMasuk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMasuk.Location = new System.Drawing.Point(353, 294);
+            this.btnMasuk.Location = new System.Drawing.Point(530, 452);
+            this.btnMasuk.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnMasuk.Name = "btnMasuk";
-            this.btnMasuk.Size = new System.Drawing.Size(183, 28);
+            this.btnMasuk.Size = new System.Drawing.Size(274, 43);
             this.btnMasuk.TabIndex = 2;
             this.btnMasuk.UseVisualStyleBackColor = false;
             this.btnMasuk.Click += new System.EventHandler(this.btnMasuk_Click);
@@ -80,9 +82,10 @@
             this.btnKeBeranda.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnKeBeranda.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnKeBeranda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnKeBeranda.Location = new System.Drawing.Point(264, 294);
+            this.btnKeBeranda.Location = new System.Drawing.Point(396, 452);
+            this.btnKeBeranda.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnKeBeranda.Name = "btnKeBeranda";
-            this.btnKeBeranda.Size = new System.Drawing.Size(150, 16);
+            this.btnKeBeranda.Size = new System.Drawing.Size(225, 25);
             this.btnKeBeranda.TabIndex = 3;
             this.btnKeBeranda.UseVisualStyleBackColor = false;
             this.btnKeBeranda.Click += new System.EventHandler(this.btnKeBeranda_Click);
@@ -96,27 +99,42 @@
             this.checkBox1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.checkBox1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.checkBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox1.Location = new System.Drawing.Point(569, 252);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.checkBox1.Location = new System.Drawing.Point(854, 388);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(50, 17);
+            this.checkBox1.Size = new System.Drawing.Size(70, 24);
             this.checkBox1.TabIndex = 4;
             this.checkBox1.Text = "Show";
             this.checkBox1.UseVisualStyleBackColor = false;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
+            // btnPetugasKeBeranda
+            // 
+            this.btnPetugasKeBeranda.BackColor = System.Drawing.Color.Transparent;
+            this.btnPetugasKeBeranda.FlatAppearance.BorderSize = 0;
+            this.btnPetugasKeBeranda.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnPetugasKeBeranda.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnPetugasKeBeranda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPetugasKeBeranda.Location = new System.Drawing.Point(547, 552);
+            this.btnPetugasKeBeranda.Name = "btnPetugasKeBeranda";
+            this.btnPetugasKeBeranda.Size = new System.Drawing.Size(242, 33);
+            this.btnPetugasKeBeranda.TabIndex = 5;
+            this.btnPetugasKeBeranda.UseVisualStyleBackColor = false;
+            this.btnPetugasKeBeranda.Click += new System.EventHandler(this.btnPetugasKeBeranda_Click);
+            // 
             // FormLoginPetugas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(894, 474);
+            this.ClientSize = new System.Drawing.Size(1341, 729);
+            this.Controls.Add(this.btnPetugasKeBeranda);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.btnKeBeranda);
             this.Controls.Add(this.btnMasuk);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FormLoginPetugas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormLoginPetugas";
@@ -133,5 +151,6 @@
         private System.Windows.Forms.Button btnMasuk;
         private System.Windows.Forms.Button btnKeBeranda;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Button btnPetugasKeBeranda;
     }
 }

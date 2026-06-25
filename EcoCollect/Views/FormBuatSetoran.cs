@@ -4,15 +4,16 @@ using EcoCollect.Models;
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Drawing;
+using System.Globalization;
 using System.Windows.Forms;
 
 namespace EcoCollect.Views
 {
     public partial class FormBuatSetoran : Form
     {
-        private int idNasabahDipilih = 0;
         private readonly NasabahController nasabahController = new NasabahController();
+        private int idNasabahDipilih = 0;
+        private readonly CultureInfo cultureId = new CultureInfo("id-ID");
 
         public FormBuatSetoran()
         {
@@ -21,6 +22,15 @@ namespace EcoCollect.Views
 
         private void FormBuatSetoran_Load(object sender, EventArgs e)
         {
+            pnlFlowNasabah.AutoScroll = true;
+
+            if (pnlFlowNasabah is FlowLayoutPanel flow)
+            {
+                flow.FlowDirection = FlowDirection.TopDown;
+                flow.WrapContents = false;
+                flow.Padding = new Padding(0);
+            }
+
             KosongkanProfilNasabah();
             LoadDaftarNasabah();
         }
@@ -40,7 +50,19 @@ namespace EcoCollect.Views
 
                 foreach (NasabahModel nasabah in daftarNasabah)
                 {
-                    Panel card = BuatCardNasabah(nasabah);
+                    CardNasabahControl card = new CardNasabahControl();
+
+                    card.Width = pnlFlowNasabah.ClientSize.Width - 25;
+
+                    if (card.Width < 300)
+                        card.Width = 300;
+
+                    card.Margin = new Padding(5);
+                    card.SetData(nasabah);
+
+                    card.NasabahClicked -= CardNasabah_NasabahClicked;
+                    card.NasabahClicked += CardNasabah_NasabahClicked;
+
                     pnlFlowNasabah.Controls.Add(card);
                 }
             }
@@ -50,96 +72,39 @@ namespace EcoCollect.Views
             }
         }
 
-        private Panel BuatCardNasabah(NasabahModel nasabah)
+        private void CardNasabah_NasabahClicked(NasabahModel nasabah)
         {
-            Panel card = new Panel();
-            card.Width = pnlFlowNasabah.Width - 25;
-            card.Height = 65;
-            card.BackColor = Color.FromArgb(225, 242, 245);
-            card.Margin = new Padding(5);
-            card.Cursor = Cursors.Hand;
-            card.Tag = nasabah;
+            if (nasabah == null)
+                return;
 
-            Label lblNama = new Label();
-            lblNama.Text = nasabah.NamaLengkap;
-            lblNama.Font = new Font("Segoe UI", 9, FontStyle.Bold);
-            lblNama.ForeColor = Color.FromArgb(0, 84, 96);
-            lblNama.Location = new Point(15, 10);
-            lblNama.AutoSize = true;
-            lblNama.Cursor = Cursors.Hand;
+            idNasabahDipilih = nasabah.IdNasabah;
 
-            Label lblUser = new Label();
-            lblUser.Text = "@" + nasabah.Username;
-            lblUser.Font = new Font("Segoe UI", 8, FontStyle.Regular);
-            lblUser.ForeColor = Color.Gray;
-            lblUser.Location = new Point(15, 33);
-            lblUser.AutoSize = true;
-            lblUser.Cursor = Cursors.Hand;
+            pnlDetailNasabah.Visible = true;
+            pnlDetailNasabah.BringToFront();
 
-            Label lblPanah = new Label();
-            lblPanah.Text = "›";
-            lblPanah.Font = new Font("Segoe UI", 26, FontStyle.Bold);
-            lblPanah.ForeColor = Color.FromArgb(0, 120, 140);
-            lblPanah.Location = new Point(card.Width - 45, 10);
-            lblPanah.AutoSize = true;
-            lblPanah.Cursor = Cursors.Hand;
-
-            card.Controls.Add(lblNama);
-            card.Controls.Add(lblUser);
-            card.Controls.Add(lblPanah);
-
-            card.Click += CardNasabah_Click;
-            lblNama.Click += CardNasabah_Click;
-            lblUser.Click += CardNasabah_Click;
-            lblPanah.Click += CardNasabah_Click;
-
-            return card;
-        }
-
-        private void CardNasabah_Click(object sender, EventArgs e)
-        {
-            Control control = sender as Control;
-
-            while (control != null && !(control is Panel && control.Tag is NasabahModel))
-            {
-                control = control.Parent;
-            }
-
-            if (control is Panel card && card.Tag is NasabahModel nasabah)
-            {
-                idNasabahDipilih = nasabah.IdNasabah;
-
-                pnlDetailNasabah.Visible = true;
-                pnlDetailNasabah.BringToFront();
-
-                lblInitial.Text = nasabah.Initial;
-                lblNamaLengkapNasabah.Text = nasabah.NamaLengkap;
-                lblUsernameNasabah.Text = "@" + nasabah.Username;
-                lblNoHp.Text = string.IsNullOrWhiteSpace(nasabah.NoHp) ? "-" : nasabah.NoHp;
-
-                LoadDetailNasabah(idNasabahDipilih);
-                LoadHistoriSetoran(idNasabahDipilih);
-            }
+            LoadDetailNasabah(idNasabahDipilih);
+            LoadHistoriSetoran(idNasabahDipilih);
         }
 
         private void LoadDetailNasabah(int idNasabah)
         {
             try
             {
-                NasabahModel nasabah = nasabahController.GetDetailNasabah(idNasabah);
+                NasabahModel detail = nasabahController.GetDetailNasabah(idNasabah);
 
-                if (nasabah == null)
+                if (detail == null)
                 {
                     MessageBox.Show("Data nasabah tidak ditemukan.");
+                    KosongkanProfilNasabah();
                     return;
                 }
 
-                lblInitial.Text = nasabah.Initial;
-                lblNamaLengkapNasabah.Text = nasabah.NamaLengkap;
-                lblUsernameNasabah.Text = "@" + nasabah.Username;
-                lblNoHp.Text = string.IsNullOrWhiteSpace(nasabah.NoHp) ? "-" : nasabah.NoHp;
-                lblFrekuensiSetor.Text = nasabah.TotalFrekuensi + " kali";
-                lblTotalMassa.Text = nasabah.TotalMassa.ToString("N2") + " kg";
+                lblInitial.Text = detail.Initial;
+                lblNamaLengkapNasabah.Text = detail.NamaLengkap;
+                lblUsernameNasabah.Text = "@" + detail.Username;
+                lblNoHp.Text = string.IsNullOrWhiteSpace(detail.NoHp) ? "-" : detail.NoHp;
+                lblFrekuensiSetor.Text = detail.TotalFrekuensi.ToString() + " kali";
+                lblTotalMassa.Text = detail.TotalMassa.ToString("N2", cultureId) + " KG";
             }
             catch (Exception ex)
             {
@@ -154,26 +119,42 @@ namespace EcoCollect.Views
                 List<HistoriSetoranModel> histori = nasabahController.GetHistoriSetoran(idNasabah);
 
                 DataTable dt = new DataTable();
-                dt.Columns.Add("ID Transaksi");
-                dt.Columns.Add("Kategori");
-                dt.Columns.Add("Berat (Kg)");
-                dt.Columns.Add("Nilai Rupiah");
+                dt.Columns.Add("ID Transaksi", typeof(string));
+                dt.Columns.Add("Kategori", typeof(string));
+                dt.Columns.Add("Berat (Kg)", typeof(decimal));
+                dt.Columns.Add("Nilai Rupiah", typeof(decimal));
 
                 foreach (HistoriSetoranModel item in histori)
                 {
                     dt.Rows.Add(
                         item.KodeTransaksi,
                         item.Kategori,
-                        item.BeratKg.ToString("N2"),
-                        "Rp" + item.NilaiRupiah.ToString("N0")
+                        item.BeratKg,
+                        item.NilaiRupiah
                     );
                 }
 
+                dgvHistoriSetoran.DataSource = null;
                 dgvHistoriSetoran.DataSource = dt;
-                dgvHistoriSetoran.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-                dgvHistoriSetoran.RowHeadersVisible = false;
+
+                dgvHistoriSetoran.ReadOnly = true;
                 dgvHistoriSetoran.AllowUserToAddRows = false;
+                dgvHistoriSetoran.AllowUserToDeleteRows = false;
+                dgvHistoriSetoran.RowHeadersVisible = false;
+                dgvHistoriSetoran.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 dgvHistoriSetoran.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+
+                if (dgvHistoriSetoran.Columns.Contains("Nilai Rupiah"))
+                {
+                    dgvHistoriSetoran.Columns["Nilai Rupiah"].DefaultCellStyle.Format = "C0";
+                    dgvHistoriSetoran.Columns["Nilai Rupiah"].DefaultCellStyle.FormatProvider = cultureId;
+                }
+
+                if (dgvHistoriSetoran.Columns.Contains("Berat (Kg)"))
+                {
+                    dgvHistoriSetoran.Columns["Berat (Kg)"].DefaultCellStyle.Format = "N2";
+                    dgvHistoriSetoran.Columns["Berat (Kg)"].DefaultCellStyle.FormatProvider = cultureId;
+                }
             }
             catch (Exception ex)
             {
@@ -189,10 +170,10 @@ namespace EcoCollect.Views
 
             lblInitial.Text = "-";
             lblNamaLengkapNasabah.Text = "-";
-            lblUsernameNasabah.Text = "-";
+            lblUsernameNasabah.Text = "@-";
             lblNoHp.Text = "-";
             lblFrekuensiSetor.Text = "0 kali";
-            lblTotalMassa.Text = "0 kg";
+            lblTotalMassa.Text = "0,00 KG";
 
             dgvHistoriSetoran.DataSource = null;
         }
@@ -221,25 +202,25 @@ namespace EcoCollect.Views
             }
         }
 
-        private void btnSetorDashboardPetugas_Click(object sender, EventArgs e)
+        private void btnDashboardPetugas_Click(object sender, EventArgs e)
         {
-            FormDashboardPetugas home = new FormDashboardPetugas();
-            home.Show();
-            this.Hide();
-        }
-
-        private void btnFormKelolaJenisSampah_Click(object sender, EventArgs e)
-        {
-            FormKelolaJenisSampah form = new FormKelolaJenisSampah();
+            FormDashboardPetugas form = new FormDashboardPetugas();
             form.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void btnRiwayatSetorSampah_Click(object sender, EventArgs e)
         {
             FormRiwayatSetorSampah form = new FormRiwayatSetorSampah();
             form.Show();
-            this.Hide();
+            this.Close();
+        }
+
+        private void btnFormKelolaJenisSampahPetugas_Click(object sender, EventArgs e)
+        {
+            FormKelolaJenisSampah form = new FormKelolaJenisSampah();
+            form.Show();
+            this.Close();
         }
 
         private void btnLogout_Click(object sender, EventArgs e)

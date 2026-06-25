@@ -126,7 +126,6 @@
             this.btnFormKelolaJenisSampah.TabIndex = 5;
             this.btnFormKelolaJenisSampah.TabStop = false;
             this.btnFormKelolaJenisSampah.UseVisualStyleBackColor = false;
-            this.btnFormKelolaJenisSampah.Click += new System.EventHandler(this.btnFormKelolaJenisSampah_Click);
             // 
             // btnLogOut
             // 
@@ -294,7 +293,6 @@
             this.btnSetorDashboardPetugas.Size = new System.Drawing.Size(349, 65);
             this.btnSetorDashboardPetugas.TabIndex = 20;
             this.btnSetorDashboardPetugas.UseVisualStyleBackColor = false;
-            this.btnSetorDashboardPetugas.Click += new System.EventHandler(this.btnSetorDashboardPetugas_Click);
             // 
             // FormBuatSetoran
             // 

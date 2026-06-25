@@ -87,6 +87,9 @@
     <Compile Include="Controllers\C_KategoriSampah.cs" />
     <Compile Include="Controllers\C_Nasabah.cs" />
     <Compile Include="Helpers\Session.cs" />
+    <Compile Include="Models\M_Auth.cs" />
+    <Compile Include="Models\M_DashboardNasabah.cs" />
+    <Compile Include="Models\M_Penarikan.cs" />
     <Compile Include="Models\UserSession.cs" />
     <Compile Include="Models\M_Dashboard.cs" />
     <Compile Include="Models\M_HistoriSetoran.cs" />
@@ -99,6 +102,18 @@
     <Compile Include="Models\M_User.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\CardKategoriControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\CardKategoriControl.Designer.cs">
+      <DependentUpon>CardKategoriControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CardNasabahControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\CardNasabahControl.Designer.cs">
+      <DependentUpon>CardNasabahControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\FormDashboardNasabah.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,12 +149,6 @@
     </Compile>
     <Compile Include="Views\FormStrukSetoran.Designer.cs">
       <DependentUpon>FormStrukSetoran.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\ItemSampah.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Views\ItemSampah.Designer.cs">
-      <DependentUpon>ItemSampah.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\FormBeranda.cs">
       <SubType>Form</SubType>
@@ -197,6 +206,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Views\CardKategoriControl.resx">
+      <DependentUpon>CardKategoriControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CardNasabahControl.resx">
+      <DependentUpon>CardNasabahControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\FormDashboardNasabah.resx">
       <DependentUpon>FormDashboardNasabah.cs</DependentUpon>
     </EmbeddedResource>
@@ -224,9 +239,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\FormStrukSetoran.resx">
       <DependentUpon>FormStrukSetoran.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\ItemSampah.resx">
-      <DependentUpon>ItemSampah.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\FormBeranda.resx">
       <DependentUpon>FormBeranda.cs</DependentUpon>

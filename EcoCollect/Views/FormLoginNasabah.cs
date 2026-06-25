@@ -77,7 +77,7 @@ namespace EcoCollect.Views
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            txtPassword.UseSystemPasswordChar = !checkBox1.Checked;
+            //txtPassword.UseSystemPasswordChar = !checkBox1.Checked;
         }
     }
 }

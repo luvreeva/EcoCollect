@@ -64,6 +64,13 @@ namespace EcoCollect.Views
             }
         }
 
+        private void BukaForm(Form form)
+        {
+            form.StartPosition = FormStartPosition.CenterScreen;
+            form.Show();
+            this.Hide();
+        }
+
         private void btnLogout_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show(
@@ -87,56 +94,37 @@ namespace EcoCollect.Views
 
         private void btnRiwayatSetorSampah_Click(object sender, EventArgs e)
         {
-            FormRiwayatSetorSampah frm = new FormRiwayatSetorSampah();
-            frm.StartPosition = FormStartPosition.CenterScreen;
-            frm.Show();
-
-            this.Hide();
+            BukaForm(new FormRiwayatSetorSampah());
         }
 
         private void btnRiwayatDashboardPetugas_Click(object sender, EventArgs e)
         {
-            FormRiwayatSetorSampah frm = new FormRiwayatSetorSampah();
-            frm.StartPosition = FormStartPosition.CenterScreen;
-            frm.Show();
-
-            this.Hide();
+            BukaForm(new FormRiwayatSetorSampah());
         }
 
         private void btnSetorSampah_Click(object sender, EventArgs e)
         {
-            FormBuatSetoran buatsetor = new FormBuatSetoran();
-            buatsetor.StartPosition = FormStartPosition.CenterScreen;
-            buatsetor.Show();
-
-            this.Hide();
-        }
-
-        private void btnFormKelolaJenisSampah_Click(object sender, EventArgs e)
-        {
-            FormKelolaJenisSampah form = new FormKelolaJenisSampah();
-            form.StartPosition = FormStartPosition.CenterScreen;
-            form.Show();
-
-            this.Hide();
+            BukaForm(new FormBuatSetoran());
         }
 
         private void btnSetorDashboardPetugas_Click(object sender, EventArgs e)
         {
-            FormBuatSetoran form = new FormBuatSetoran();
-            form.StartPosition =FormStartPosition.CenterScreen;
-            form.Show();
+            BukaForm(new FormBuatSetoran());
+        }
 
-            this.Hide();
+        private void btnFormKelolaJenisSampah_Click(object sender, EventArgs e)
+        {
+            BukaForm(new FormKelolaJenisSampah());
         }
 
         private void btnKelolaSampahDashboardPetugas_Click(object sender, EventArgs e)
         {
-            FormKelolaJenisSampah form = new FormKelolaJenisSampah();
-            form.StartPosition = FormStartPosition.CenterScreen;
-            form.Show();
+            BukaForm(new FormKelolaJenisSampah());
+        }
 
-            this.Hide();
+        private void btnLihatSemua_Click(object sender, EventArgs e)
+        {
+            BukaForm(new FormRiwayatSetorSampah());
         }
     }
 }

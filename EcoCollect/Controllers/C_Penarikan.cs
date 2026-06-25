@@ -1,73 +1,32 @@
-﻿using Npgsql;
-using System;
+﻿using EcoCollect.Models;
 
 namespace EcoCollect.Controllers
 {
-    
     public class C_Penarikan : ICrud_Controller
     {
-        
-        public int IdNasabah { get; set; }
-        public string Metode { get; set; }
-        public string NomorTujuan { get; set; } 
-        public decimal Nominal { get; set; }
-        public decimal BiayaAdmin { get; set; }
-        public decimal TotalPotong { get; set; }
-
-        
         public bool Tambah()
         {
-            using (NpgsqlConnection conn = EcoCollect.Config.DbConnection.GetConnection())
-            {
-                conn.Open();
-                using (var trans = conn.BeginTransaction())
-                {
-                    try
-                    {
-                        //masukkin ke tabel penarikan
-                        string insertQuery = @"
-                            INSERT INTO penarikan (kode_penarikan, id_nasabah, metode, nomor_tujuan, nominal, biaya_admin, total_potong)
-                            VALUES ('WD-' || FLOOR(RANDOM()*89999 + 10000)::text, @id, @metode, @tujuan, @nominal, @biaya, @total);";
-
-                        using (NpgsqlCommand cmdInsert = new NpgsqlCommand(insertQuery, conn))
-                        {
-                            cmdInsert.Parameters.AddWithValue("@id", IdNasabah);
-                            cmdInsert.Parameters.AddWithValue("@metode", Metode);
-                            cmdInsert.Parameters.AddWithValue("@tujuan", NomorTujuan);
-                            cmdInsert.Parameters.AddWithValue("@nominal", Nominal);
-                            cmdInsert.Parameters.AddWithValue("@biaya", BiayaAdmin);
-                            cmdInsert.Parameters.AddWithValue("@total", TotalPotong);
-                            cmdInsert.ExecuteNonQuery();
-                        }
-
-                        // potong saldo di tabel nasabah
-                        string updateQuery = "UPDATE nasabah SET saldo = saldo - @total WHERE id_nasabah = @id";
-                        using (NpgsqlCommand cmdUp = new NpgsqlCommand(updateQuery, conn))
-                        {
-                            cmdUp.Parameters.AddWithValue("@total", TotalPotong);
-                            cmdUp.Parameters.AddWithValue("@id", IdNasabah);
-                            cmdUp.ExecuteNonQuery();
-                        }
-
-                        trans.Commit();
-                        return true;
-                    }
-                    catch
-                    {
-                        trans.Rollback();
-                        return false;
-                    }
-                }
-            }
+            return false;
         }
 
-        
+        public bool Tambah(PenarikanModel penarikan)
+        {
+            return PenarikanModel.TambahPenarikan(penarikan);
+        }
+
+        public PenarikanNasabahInfoModel GetDataNasabah(string username)
+        {
+            return PenarikanModel.GetDataNasabah(username);
+        }
+
+        public decimal GetSaldo(string username)
+        {
+            return PenarikanModel.GetSaldo(username);
+        }
+
         public decimal HitungBiayaAdmin(string metodePembayaran)
         {
-            return metodePembayaran.ToUpper().Contains("BANK") ? 1000 : 500;
+            return PenarikanModel.HitungBiayaAdmin(metodePembayaran);
         }
-
-        
-        
     }
 }
