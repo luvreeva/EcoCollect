@@ -81,7 +81,7 @@
             this.btnSelesai.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnSelesai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSelesai.Location = new System.Drawing.Point(359, 394);
-            this.btnSelesai.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSelesai.Margin = new System.Windows.Forms.Padding(2);
             this.btnSelesai.Name = "btnSelesai";
             this.btnSelesai.Size = new System.Drawing.Size(173, 20);
             this.btnSelesai.TabIndex = 3;
@@ -94,7 +94,7 @@
             this.flpRincianSetoran.BackColor = System.Drawing.Color.Transparent;
             this.flpRincianSetoran.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flpRincianSetoran.Location = new System.Drawing.Point(256, 263);
-            this.flpRincianSetoran.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.flpRincianSetoran.Margin = new System.Windows.Forms.Padding(2);
             this.flpRincianSetoran.Name = "flpRincianSetoran";
             this.flpRincianSetoran.Size = new System.Drawing.Size(379, 96);
             this.flpRincianSetoran.TabIndex = 4;
@@ -126,8 +126,9 @@
             this.Controls.Add(this.lblNoTelepon);
             this.Controls.Add(this.lblNamaNasabah);
             this.Controls.Add(this.lblTanggalTransaksi);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormStrukSetoran";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormStrukSetoran";
             this.Load += new System.EventHandler(this.FormStrukSetoran_Load);
             this.ResumeLayout(false);

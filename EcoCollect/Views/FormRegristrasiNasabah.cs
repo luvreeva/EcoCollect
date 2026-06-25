@@ -76,13 +76,11 @@ namespace EcoCollect.Views
                 }
                 else
                 {
-                    // INI YANG TADI HILANG! Jika koneksi gagal / query ditolak pgAdmin
                     MessageBox.Show("Gagal menyimpan ke database! Periksa apakah koneksi pgAdmin terputus atau nama tabel salah.", "Registrasi Gagal", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
             {
-                // Menangkap error crash sistem dari database
                 MessageBox.Show("Gagal Daftar (Sistem Error): " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }

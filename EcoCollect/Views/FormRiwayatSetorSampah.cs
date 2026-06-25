@@ -25,21 +25,18 @@ namespace EcoCollect.Views
 
         }
 
-        // --- FUNGSI SUDAH BERSIH TANPA QUERY SQL (View Standar MVC) ---
+      
         private void LoadRiwayatSetorPetugas(string keyword = "")
         {
             try
             {
-                // 1. Instansiasi objek model petugas
+               
                 Models.M_Petugas petugasModel = new Models.M_Petugas();
 
-                // 2. Ambil IdPetugas dari Session Helper buatan temanmu
                 int idPetugasLogin = Session.IdPetugas;
 
-                // 3. Panggil fungsi mengambil data dari Model
                 DataTable dt = petugasModel.GetRiwayatSetoran(idPetugasLogin, keyword);
 
-                // 4. Masukkan datanya langsung ke DataGridView
                 dgvRekapRiwayatSetoran.DataSource = dt;
             }
             catch (Exception ex)
@@ -63,7 +60,6 @@ namespace EcoCollect.Views
 
             if (result == DialogResult.Yes)
             {
-                // Menggunakan fungsi pembersih session milik temanmu
                 Session.ClearPetugas();
 
                 FormLoginPetugas login = new FormLoginPetugas();
@@ -82,7 +78,6 @@ namespace EcoCollect.Views
 
         private void tbCariRiwayatSetoran_TextChanged(object sender, EventArgs e)
         {
-            // Fitur search otomatis memanggil fungsi load dengan membawa keyword pencarian
             LoadRiwayatSetorPetugas(tbCariRiwayatSetoran.Text);
         }
 

@@ -1,8 +1,7 @@
-﻿using Npgsql;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data; 
+using System.Data;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
@@ -15,8 +14,8 @@ namespace EcoCollect.Views
 {
     public partial class FormTarikSaldo : Form
     {
-        // Mengunci session username nasabah yang aktif login
         private string usernameLogin = EcoCollect.Models.UserSession.UsernameBaruLogin;
+        private EcoCollect.Controllers.C_Penarikan penarikanCtrl = new EcoCollect.Controllers.C_Penarikan();
 
         public FormTarikSaldo()
         {
@@ -49,7 +48,7 @@ namespace EcoCollect.Views
                 string metode = cmbMetodePenarikan.Text;
                 string tujuan = tbNomor.Text;
 
-                if (string.IsNullOrWhiteSpace(tbNomor.Text))
+                if (string.IsNullOrWhiteSpace(tujuan))
                 {
                     MessageBox.Show("Nomor tujuan tidak boleh kosong!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
@@ -73,82 +72,48 @@ namespace EcoCollect.Views
                     return;
                 }
 
-                decimal biayaAdmin = metode.ToUpper().Contains("BANK") ? 1000 : 500;
+                decimal biayaAdmin = penarikanCtrl.HitungBiayaAdmin(metode);
                 decimal totalPotong = nominal + biayaAdmin;
 
-                // Menggunakan koneksi pusat agar menembak database ECO-COLLECT1 yang valid
-                using (NpgsqlConnection conn = EcoCollect.Config.DbConnection.GetConnection())
+                decimal saldoSistem = penarikanCtrl.AmbilSaldoNasabah(usernameLogin);
+                int idNasabah = penarikanCtrl.AmbilIdNasabah(usernameLogin);
+
+                if (totalPotong > saldoSistem)
                 {
-                    conn.Open();
-
-                    // 1. Ambil id_nasabah dan saldo milik nasabah yang sedang login
-                    int idNasabah = 0;
-                    decimal saldoSistem = 0;
-
-                    string queryUser = "SELECT id_nasabah, COALESCE(saldo, 0) AS saldo FROM nasabah WHERE username = @user";
-                    using (NpgsqlCommand cmdUser = new NpgsqlCommand(queryUser, conn))
-                    {
-                        cmdUser.Parameters.AddWithValue("@user", usernameLogin);
-                        using (var reader = cmdUser.ExecuteReader())
-                        {
-                            if (reader.Read())
-                            {
-                                idNasabah = Convert.ToInt32(reader["id_nasabah"]);
-                                saldoSistem = Convert.ToDecimal(reader["saldo"]);
-                            }
-                        }
-                    }
-
-                    // Cek kecukupan saldo
-                    if (totalPotong > saldoSistem)
-                    {
-                        MessageBox.Show($"Saldo tidak cukup!\nSaldo Anda: Rp {saldoSistem:N0}\nTotal Potong + Admin: Rp {totalPotong:N0}", "Transaksi Gagal", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
-                    }
-
-                    // 2. Mulai proses pemotongan saldo dan insert riwayat penarikan
-                    // --- EKSEKUSI LEWAT CONTROLLER (Penerapan Murni MVC & OOP) ---
-                    EcoCollect.Controllers.C_Penarikan penarikanController = new EcoCollect.Controllers.C_Penarikan();
-                    penarikanController.IdNasabah = idNasabah;
-                    penarikanController.Metode = metode;
-                    penarikanController.NomorTujuan = tujuan;
-                    penarikanController.Nominal = nominal;
-                    penarikanController.BiayaAdmin = biayaAdmin;
-                    penarikanController.TotalPotong = totalPotong;
-
-                    // Memanggil fungsi Tambah() dari Interface ICrud_Controller via Controller
-                    if (penarikanController.Tambah())
-                    {
-                        MessageBox.Show("Penarikan berhasil diproses!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    else
-                    {
-                        MessageBox.Show("Gagal memproses transaksi penarikan melalui Controller.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
-                    }
+                    MessageBox.Show($"Saldo tidak cukup!\nSaldo Anda: Rp {saldoSistem:N0}\nTotal Potong + Admin: Rp {totalPotong:N0}", "Transaksi Gagal", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
                 }
 
-                // --- PERUBAHAN DI SINI ---
-                // 1. Panggil ulang fungsi load agar label saldo langsung ter-update berkurang di layar
-                LoadSaldoAnda();
+                penarikanCtrl.IdNasabah = idNasabah;
+                penarikanCtrl.Metode = metode;
+                penarikanCtrl.NomorTujuan = tujuan;
+                penarikanCtrl.Nominal = nominal;
+                penarikanCtrl.BiayaAdmin = biayaAdmin;
+                penarikanCtrl.TotalPotong = totalPotong;
 
-                // 2. Kosongkan form input agar siap dipakai kembali
-                tbNomor.Clear();
-                tbNominal.Clear();
-                cmbMetodePenarikan.SelectedIndex = 0;
-
-                // 3. Tetap jalankan refresh dashboard di background
-                var dashboard = Application.OpenForms["FormDashboardNasabah"] as FormDashboardNasabah;
-                if (dashboard != null)
+                if (penarikanCtrl.Tambah())
                 {
-                    dashboard.RefreshDashboard();
-                }
+                    MessageBox.Show("Penarikan berhasil diproses!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                // 4. Perintah 'this.Close();' sudah dihapus dari sini agar view tidak menutup sendiri!
+                    LoadSaldoAnda();
+                    tbNomor.Clear();
+                    tbNominal.Clear();
+                    cmbMetodePenarikan.SelectedIndex = 0;
+
+                    var dashboard = Application.OpenForms["FormDashboardNasabah"] as FormDashboardNasabah;
+                    if (dashboard != null)
+                    {
+                        dashboard.RefreshDashboard();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Gagal memproses transaksi penarikan melalui Controller.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Error Database", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Error Sistem", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -156,18 +121,8 @@ namespace EcoCollect.Views
         {
             try
             {
-                using (NpgsqlConnection conn = EcoCollect.Config.DbConnection.GetConnection())
-                {
-                    conn.Open();
-                    string query = "SELECT COALESCE(saldo, 0) FROM nasabah WHERE username = @user";
-
-                    using (NpgsqlCommand cmd = new NpgsqlCommand(query, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@user", usernameLogin);
-                        decimal saldo = Convert.ToDecimal(cmd.ExecuteScalar());
-                        lblSaldoAnda.Text = "Rp " + saldo.ToString("N0");
-                    }
-                }
+                decimal saldo = penarikanCtrl.AmbilSaldoNasabah(usernameLogin);
+                lblSaldoAnda.Text = "Rp " + saldo.ToString("N0");
             }
             catch
             {

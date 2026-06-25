@@ -42,6 +42,7 @@
             this.mainPanel = new System.Windows.Forms.Panel();
             this.dgvRiwayatDashboardPetugas = new System.Windows.Forms.DataGridView();
             this.btnSetorSampah = new System.Windows.Forms.Button();
+            this.btnLihatSemua = new System.Windows.Forms.Button();
             this.mainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRiwayatDashboardPetugas)).BeginInit();
             this.SuspendLayout();
@@ -221,13 +222,27 @@
             this.btnSetorSampah.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnSetorSampah.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSetorSampah.Location = new System.Drawing.Point(23, 205);
-            this.btnSetorSampah.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSetorSampah.Margin = new System.Windows.Forms.Padding(2);
             this.btnSetorSampah.Name = "btnSetorSampah";
             this.btnSetorSampah.Size = new System.Drawing.Size(226, 31);
             this.btnSetorSampah.TabIndex = 13;
             this.btnSetorSampah.TabStop = false;
             this.btnSetorSampah.UseVisualStyleBackColor = false;
             this.btnSetorSampah.Click += new System.EventHandler(this.btnSetorSampah_Click);
+            // 
+            // btnLihatSemua
+            // 
+            this.btnLihatSemua.BackColor = System.Drawing.Color.Transparent;
+            this.btnLihatSemua.FlatAppearance.BorderSize = 0;
+            this.btnLihatSemua.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnLihatSemua.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnLihatSemua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLihatSemua.Location = new System.Drawing.Point(764, 256);
+            this.btnLihatSemua.Name = "btnLihatSemua";
+            this.btnLihatSemua.Size = new System.Drawing.Size(86, 18);
+            this.btnLihatSemua.TabIndex = 14;
+            this.btnLihatSemua.UseVisualStyleBackColor = false;
+            this.btnLihatSemua.Click += new System.EventHandler(this.btnLihatSemua_Click);
             // 
             // FormDashboardPetugas
             // 
@@ -236,6 +251,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(894, 474);
+            this.Controls.Add(this.btnLihatSemua);
             this.Controls.Add(this.btnSetorSampah);
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.lbTotalSampahDashboardPetugas);
@@ -275,5 +291,6 @@
         private System.Windows.Forms.Panel mainPanel;
         private System.Windows.Forms.DataGridView dgvRiwayatDashboardPetugas;
         private System.Windows.Forms.Button btnSetorSampah;
+        private System.Windows.Forms.Button btnLihatSemua;
     }
 }

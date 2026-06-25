@@ -71,7 +71,6 @@ namespace EcoCollect.Views
         {
             try
             {
-                // Ubah GetTotalTelahDitarik menjadi GetTotalTarik
                 lblTelahDitarik.Text = "Rp " + nasabahCtrl.GetTotalTarik(usernameLogin).ToString("N0");
             }
             catch { lblTelahDitarik.Text = "Rp 0"; }

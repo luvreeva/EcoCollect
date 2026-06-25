@@ -87,6 +87,8 @@
     <Compile Include="Controllers\C_KategoriSampah.cs" />
     <Compile Include="Controllers\C_Nasabah.cs" />
     <Compile Include="Helpers\Session.cs" />
+    <Compile Include="Models\PenarikanModels.cs" />
+    <Compile Include="Models\PetugasModels.cs" />
     <Compile Include="Models\UserSession.cs" />
     <Compile Include="Models\M_Dashboard.cs" />
     <Compile Include="Models\M_HistoriSetoran.cs" />

@@ -51,7 +51,7 @@
             this.btnDashboard.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDashboard.Location = new System.Drawing.Point(21, 120);
-            this.btnDashboard.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDashboard.Margin = new System.Windows.Forms.Padding(2);
             this.btnDashboard.Name = "btnDashboard";
             this.btnDashboard.Size = new System.Drawing.Size(216, 35);
             this.btnDashboard.TabIndex = 0;
@@ -66,7 +66,7 @@
             this.btnLayananPenyetoran.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnLayananPenyetoran.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLayananPenyetoran.Location = new System.Drawing.Point(21, 205);
-            this.btnLayananPenyetoran.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLayananPenyetoran.Margin = new System.Windows.Forms.Padding(2);
             this.btnLayananPenyetoran.Name = "btnLayananPenyetoran";
             this.btnLayananPenyetoran.Size = new System.Drawing.Size(215, 31);
             this.btnLayananPenyetoran.TabIndex = 1;
@@ -81,7 +81,7 @@
             this.btnRiwayatSetorSampah.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnRiwayatSetorSampah.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRiwayatSetorSampah.Location = new System.Drawing.Point(23, 247);
-            this.btnRiwayatSetorSampah.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRiwayatSetorSampah.Margin = new System.Windows.Forms.Padding(2);
             this.btnRiwayatSetorSampah.Name = "btnRiwayatSetorSampah";
             this.btnRiwayatSetorSampah.Size = new System.Drawing.Size(212, 35);
             this.btnRiwayatSetorSampah.TabIndex = 2;
@@ -96,7 +96,7 @@
             this.btnLogOut.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogOut.Location = new System.Drawing.Point(22, 430);
-            this.btnLogOut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLogOut.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Size = new System.Drawing.Size(213, 29);
             this.btnLogOut.TabIndex = 3;
@@ -111,7 +111,7 @@
             this.btnSimpanJenisSampah.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnSimpanJenisSampah.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSimpanJenisSampah.Location = new System.Drawing.Point(675, 362);
-            this.btnSimpanJenisSampah.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSimpanJenisSampah.Margin = new System.Windows.Forms.Padding(2);
             this.btnSimpanJenisSampah.Name = "btnSimpanJenisSampah";
             this.btnSimpanJenisSampah.Size = new System.Drawing.Size(174, 26);
             this.btnSimpanJenisSampah.TabIndex = 4;
@@ -121,7 +121,7 @@
             // txtNamaJenis
             // 
             this.txtNamaJenis.Location = new System.Drawing.Point(673, 125);
-            this.txtNamaJenis.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNamaJenis.Margin = new System.Windows.Forms.Padding(2);
             this.txtNamaJenis.Name = "txtNamaJenis";
             this.txtNamaJenis.Size = new System.Drawing.Size(168, 20);
             this.txtNamaJenis.TabIndex = 5;
@@ -129,7 +129,7 @@
             // txtHargaPerKg
             // 
             this.txtHargaPerKg.Location = new System.Drawing.Point(672, 184);
-            this.txtHargaPerKg.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtHargaPerKg.Margin = new System.Windows.Forms.Padding(2);
             this.txtHargaPerKg.Name = "txtHargaPerKg";
             this.txtHargaPerKg.Size = new System.Drawing.Size(169, 20);
             this.txtHargaPerKg.TabIndex = 6;
@@ -137,7 +137,7 @@
             // txtUrlThumbnail
             // 
             this.txtUrlThumbnail.Location = new System.Drawing.Point(674, 243);
-            this.txtUrlThumbnail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUrlThumbnail.Margin = new System.Windows.Forms.Padding(2);
             this.txtUrlThumbnail.Name = "txtUrlThumbnail";
             this.txtUrlThumbnail.Size = new System.Drawing.Size(166, 20);
             this.txtUrlThumbnail.TabIndex = 7;
@@ -145,7 +145,7 @@
             // txtDeskripsi
             // 
             this.txtDeskripsi.Location = new System.Drawing.Point(677, 300);
-            this.txtDeskripsi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDeskripsi.Margin = new System.Windows.Forms.Padding(2);
             this.txtDeskripsi.Name = "txtDeskripsi";
             this.txtDeskripsi.Size = new System.Drawing.Size(164, 20);
             this.txtDeskripsi.TabIndex = 8;
@@ -155,7 +155,7 @@
             this.flpKategoriSampah.AutoScroll = true;
             this.flpKategoriSampah.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flpKategoriSampah.Location = new System.Drawing.Point(301, 98);
-            this.flpKategoriSampah.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.flpKategoriSampah.Margin = new System.Windows.Forms.Padding(2);
             this.flpKategoriSampah.Name = "flpKategoriSampah";
             this.flpKategoriSampah.Size = new System.Drawing.Size(317, 341);
             this.flpKategoriSampah.TabIndex = 9;
@@ -164,7 +164,7 @@
             // txtCariKategori
             // 
             this.txtCariKategori.Location = new System.Drawing.Point(505, 66);
-            this.txtCariKategori.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCariKategori.Margin = new System.Windows.Forms.Padding(2);
             this.txtCariKategori.Name = "txtCariKategori";
             this.txtCariKategori.Size = new System.Drawing.Size(120, 20);
             this.txtCariKategori.TabIndex = 10;
@@ -178,7 +178,7 @@
             this.btnTambahJenis.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnTambahJenis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTambahJenis.Location = new System.Drawing.Point(658, 53);
-            this.btnTambahJenis.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTambahJenis.Margin = new System.Windows.Forms.Padding(2);
             this.btnTambahJenis.Name = "btnTambahJenis";
             this.btnTambahJenis.Size = new System.Drawing.Size(201, 30);
             this.btnTambahJenis.TabIndex = 11;
@@ -204,8 +204,9 @@
             this.Controls.Add(this.btnRiwayatSetorSampah);
             this.Controls.Add(this.btnLayananPenyetoran);
             this.Controls.Add(this.btnDashboard);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormKelolaJenisSampah";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormKelolaJenisSampah";
             this.Load += new System.EventHandler(this.FormKelolaJenisSampah_Load);
             this.ResumeLayout(false);

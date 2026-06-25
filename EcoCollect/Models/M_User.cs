@@ -1,6 +1,6 @@
 ﻿using System;
-using System.Data; // Tambahkan ini untuk DataTable
-using Npgsql;     // Tambahkan ini untuk Postgres
+using System.Data; 
+using Npgsql;   
 
 namespace EcoCollect.Models
 {
@@ -37,7 +37,7 @@ namespace EcoCollect.Models
             return "Petugas / Admin";
         }
 
-        // --- PAKAI KODE REVISI INI ---
+    
         public DataTable GetRiwayatSetoran(int idPetugas, string keyword = "")
         {
             DataTable dt = new DataTable();
@@ -58,7 +58,7 @@ namespace EcoCollect.Models
                 )
                 ORDER BY ts.tanggal DESC";
 
-            // Menggunakan EcoCollect.Config (Bukan Helpers.Config) agar eror merah hilang!
+         
             using (NpgsqlConnection conn = EcoCollect.Config.DbConnection.GetConnection())
             {
                 conn.Open();

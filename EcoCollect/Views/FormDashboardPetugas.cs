@@ -138,5 +138,14 @@ namespace EcoCollect.Views
 
             this.Hide();
         }
+
+        private void btnLihatSemua_Click(object sender, EventArgs e)
+        {
+            FormRiwayatSetorSampah frm = new FormRiwayatSetorSampah();
+            frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.Show();
+
+            this.Hide();
+        }
     }
 }

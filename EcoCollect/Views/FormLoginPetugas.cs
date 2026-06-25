@@ -53,12 +53,8 @@ namespace EcoCollect.Views
 
             if (berhasil)
             {
-                // --- KUNCI PERBAIKAN: Isi Session secara manual berdasarkan username jika Controller-mu belum mengisinya ---
-                // Kita panggil class Session agar terisi dengan data yang pas dari text input
                 Session.Username = username;
 
-                // Catatan: Idealnya AuthController.LoginPetugas yang bertugas mengisi Session.IdPetugas dan Session.NamaPetugas dari database. 
-                // Jika temanmu lupa mengisinya di dalam AuthController, pantesan datanya kosong.
 
                 MessageBox.Show(
                     "Login sebagai " + (string.IsNullOrEmpty(Session.NamaPetugas) ? username : Session.NamaPetugas),

@@ -1,5 +1,4 @@
-﻿using Npgsql;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,11 +15,9 @@ namespace EcoCollect.Views
 {
     public partial class FormDashboardNasabah : Form
     {
-        // 1. MEMPERBAIKI NAMA DATABASE SINKRON DENGAN PGADMIN
-        // Ubah bagian atas ini menjadi deklarasi saja
-        private string connString = "Host=localhost;Port=5432;Username=postgres;Password=Reeva97;Database=\"ECO-COLLECT\"";
-        private string usernameLogin; // Biarkan kosong dulu di sini
+        private string usernameLogin;
         private EcoCollect.Controllers.C_NasabahDashboard nasabahCtrl = new EcoCollect.Controllers.C_NasabahDashboard();
+
         public FormDashboardNasabah()
         {
             InitializeComponent();
@@ -31,10 +28,10 @@ namespace EcoCollect.Views
 
         private void FormDashboardNasabah_Load(object sender, EventArgs e)
         {
-            // AMBIL SESSION USERNAME DI SINI (Tepat saat form dibuka)
+            
             usernameLogin = EcoCollect.Models.UserSession.UsernameBaruLogin;
 
-            // Tambahkan debug kecil ini untuk memastikan username tidak kosong saat demo
+           
             if (string.IsNullOrEmpty(usernameLogin))
             {
                 MessageBox.Show("Debug: Session Username Kosong! Silakan login ulang melalui Form Login.", "Peringatan");
@@ -48,20 +45,10 @@ namespace EcoCollect.Views
         {
             try
             {
-                using (NpgsqlConnection conn = EcoCollect.Config.DbConnection.GetConnection())
+                string namaLengkap = nasabahCtrl.GetNamaLengkap(usernameLogin);
+                if (!string.IsNullOrEmpty(namaLengkap))
                 {
-                    conn.Open();
-                    string query = "SELECT nama_lengkap FROM nasabah WHERE username = @user";
-                    using (NpgsqlCommand cmd = new NpgsqlCommand(query, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@user", usernameLogin);
-                        object result = cmd.ExecuteScalar();
-                        if (result != null)
-                        {
-                            // Ubah text label ucapan dashboard-mu (sesuaikan dengan nama objek label kamu jika berbeda)
-                            // lblSelamatDatang.Text = "Selamat Datang, " + result.ToString() + "!";
-                        }
-                    }
+                    
                 }
             }
             catch { }
@@ -87,7 +74,6 @@ namespace EcoCollect.Views
         {
             try
             {
-                // Ambil riwayat penyetoran, batasi hanya 5 baris terakhir untuk dashboard
                 dgvRiwayatPenyetoranDashboard.DataSource = nasabahCtrl.GetRiwayatPenyetoran(usernameLogin, 5);
                 FormatDGVPenyetoran();
             }
@@ -121,6 +107,7 @@ namespace EcoCollect.Views
                 MessageBox.Show("Error load penarikan: " + ex.Message);
             }
         }
+
         private void LoadSaldoRealtime()
         {
             try
@@ -129,6 +116,7 @@ namespace EcoCollect.Views
             }
             catch { }
         }
+
         private void LoadTotalSetor()
         {
             try
@@ -158,9 +146,22 @@ namespace EcoCollect.Views
 
         private void btnLogoutNasabah_Click(object sender, EventArgs e)
         {
-            EcoCollect.Views.FormBeranda beranda = new EcoCollect.Views.FormBeranda();
-            beranda.Show();
-            this.Close();
+            DialogResult dialogResult = MessageBox.Show(
+                "Apakah Anda yakin ingin keluar dari akun nasabah ini?",
+                "Konfirmasi Keluar",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
+
+            if (dialogResult == DialogResult.Yes)
+            {
+                EcoCollect.Models.UserSession.UsernameBaruLogin = "";
+
+                EcoCollect.Views.FormBeranda beranda = new EcoCollect.Views.FormBeranda();
+                beranda.Show();
+
+                this.Close();
+            }
         }
 
         private void btnFiturTarikSaldo_Click(object sender, EventArgs e)
@@ -190,7 +191,5 @@ namespace EcoCollect.Views
                 MessageBox.Show("Gagal membuka halaman profil: " + ex.Message, "Error Navigasi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        
     }
 }

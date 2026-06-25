@@ -47,10 +47,9 @@ namespace EcoCollect.Views
             {
                 AuthController auth = new AuthController();
 
-                // Memanggil fungsi login baru yang mengembalikan status angka
                 int hasilLogin = auth.LoginNasabah(txtUsername.Text, txtPassword.Text);
 
-                if (hasilLogin == 1) // Sukses
+                if (hasilLogin == 1) 
                 {
                     EcoCollect.Models.UserSession.UsernameBaruLogin = txtUsername.Text;
 
@@ -60,11 +59,11 @@ namespace EcoCollect.Views
                     FormDashboardNasabah dashboard = new FormDashboardNasabah();
                     dashboard.Show();
                 }
-                else if (hasilLogin == 0) // Username tidak ada
+                else if (hasilLogin == 0)
                 {
                     MessageBox.Show("Username Anda belum terdaftar di sistem! Silakan registrasi terlebih dahulu.", "Gagal Masuk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                else if (hasilLogin == -1) // Password salah
+                else if (hasilLogin == -1)
                 {
                     MessageBox.Show("Password yang Anda masukkan salah! Periksa kembali huruf besar-kecilnya.", "Gagal Masuk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }

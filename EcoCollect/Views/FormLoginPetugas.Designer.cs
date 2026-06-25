@@ -80,7 +80,7 @@
             this.btnKeBeranda.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnKeBeranda.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnKeBeranda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnKeBeranda.Location = new System.Drawing.Point(264, 294);
+            this.btnKeBeranda.Location = new System.Drawing.Point(371, 363);
             this.btnKeBeranda.Name = "btnKeBeranda";
             this.btnKeBeranda.Size = new System.Drawing.Size(150, 16);
             this.btnKeBeranda.TabIndex = 3;

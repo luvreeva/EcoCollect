@@ -82,7 +82,7 @@
             this.cmbJenisSampah.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbJenisSampah.FormattingEnabled = true;
             this.cmbJenisSampah.Location = new System.Drawing.Point(539, 150);
-            this.cmbJenisSampah.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbJenisSampah.Margin = new System.Windows.Forms.Padding(2);
             this.cmbJenisSampah.Name = "cmbJenisSampah";
             this.cmbJenisSampah.Size = new System.Drawing.Size(141, 21);
             this.cmbJenisSampah.TabIndex = 3;
@@ -90,7 +90,7 @@
             // txtBeratKg
             // 
             this.txtBeratKg.Location = new System.Drawing.Point(730, 151);
-            this.txtBeratKg.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBeratKg.Margin = new System.Windows.Forms.Padding(2);
             this.txtBeratKg.Name = "txtBeratKg";
             this.txtBeratKg.Size = new System.Drawing.Size(21, 20);
             this.txtBeratKg.TabIndex = 4;
@@ -103,7 +103,7 @@
             this.btnTambah.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnTambah.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTambah.Location = new System.Drawing.Point(767, 151);
-            this.btnTambah.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTambah.Margin = new System.Windows.Forms.Padding(2);
             this.btnTambah.Name = "btnTambah";
             this.btnTambah.Size = new System.Drawing.Size(76, 16);
             this.btnTambah.TabIndex = 5;
@@ -144,7 +144,7 @@
             this.btnSimpanSetoran.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnSimpanSetoran.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSimpanSetoran.Location = new System.Drawing.Point(707, 317);
-            this.btnSimpanSetoran.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSimpanSetoran.Margin = new System.Windows.Forms.Padding(2);
             this.btnSimpanSetoran.Name = "btnSimpanSetoran";
             this.btnSimpanSetoran.Size = new System.Drawing.Size(141, 16);
             this.btnSimpanSetoran.TabIndex = 8;
@@ -162,7 +162,7 @@
             this.dgvDetailSetoran.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDetailSetoran.GridColor = System.Drawing.Color.Black;
             this.dgvDetailSetoran.Location = new System.Drawing.Point(537, 186);
-            this.dgvDetailSetoran.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvDetailSetoran.Margin = new System.Windows.Forms.Padding(2);
             this.dgvDetailSetoran.Name = "dgvDetailSetoran";
             this.dgvDetailSetoran.ReadOnly = true;
             this.dgvDetailSetoran.RowHeadersVisible = false;
@@ -180,7 +180,7 @@
             this.btnKembali.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnKembali.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKembali.Location = new System.Drawing.Point(523, 57);
-            this.btnKembali.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnKembali.Margin = new System.Windows.Forms.Padding(2);
             this.btnKembali.Name = "btnKembali";
             this.btnKembali.Size = new System.Drawing.Size(29, 18);
             this.btnKembali.TabIndex = 10;
@@ -205,8 +205,9 @@
             this.Controls.Add(this.lblTeleponNasabah);
             this.Controls.Add(this.lblUsernameNasabah);
             this.Controls.Add(this.lblNamaNasabah);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormLayananPenyetoran";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormLayananPenyetoran";
             this.Load += new System.EventHandler(this.FormLayananPenyetoran_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetailSetoran)).EndInit();
